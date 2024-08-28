@@ -1,0 +1,15 @@
+FONTS
+=====
+Cursive and floaty font: Pinyon Script 
+Body font: ???
+Heading font: ???
+
+
+COLOR TEMPLATE
+==============
+Source: https://colorhunt.co/palette/fef3e2bec6a0708871606676
+Colors:
+    - FEF3E2
+    - BEC6A0
+    - 708871
+    - 606676
