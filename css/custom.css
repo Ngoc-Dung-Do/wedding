@@ -1,0 +1,24 @@
+:root {
+    --color-wedding-1: #FEF3E2;
+    --color-wedding-2: #BEC6A0;
+    --color-wedding-3: #708871;
+    --color-wedding-4: #606676;
+
+    --font-size-large: 24pt;
+    font-size: 16pt;
+}
+
+.pinyon-script-regular {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#heading {
+    background: var(--color-wedding-1);
+    font-size: var(--font-size-large);
+    min-height: 3rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
