@@ -5,11 +5,12 @@
     --color-wedding-4: #606676;
 
     --font-size-large: 24pt;
+    margin: 0;
     font-size: 16pt;
 }
 
-.pinyon-script-regular {
-  font-family: "Pinyon Script", cursive;
+.fancy {
+  font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -22,3 +23,57 @@
     align-items: center;
     justify-content: center;
 }
+
+body {
+    background-color: color-mix(in srgb, var(--color-wedding-1), #000 10%);
+}
+
+/* Fit carousel inside a height */
+/* .carousel-item { */
+/*     max-height: 70vh; */
+/*     object-fit: cover; */
+/* } */
+
+/* .carousel-container { */
+/*     position: relative; */
+/* } */
+
+
+.carousel-overlay {
+    position: static; 
+    /* margin: auto; */
+    /* left: 0; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* top: 50%; */
+    /* left: 50%; */
+    transform: translate(50%, -100%);
+    font-size: calc((750% - 4.5rem) / 7);
+    align: center;
+}
+
+
+.stroke {
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
+/* Increase padding on large screens */
+@media only screen and (min-width: 768px) {
+    #container {
+        max-width: 1000px;
+        margin: auto; 
+    }
+}
+
+/* .carousel-img { */
+/*     max-height: 50vh; */
+/* } */
+/*  */
+/* #mycarousel { */
+/*     max-height: 50vh; */
+/* } */
