@@ -14,11 +14,76 @@
   font-style: normal;
 }
 
+
 #heading {
     background: var(--color-wedding-1);
     font-size: var(--font-size-large);
     min-height: 3rem;
-    display: flex; 
+    display: block; 
+    font-family: 'Pinyon Script', cursive; /* Đảm bảo font đã được thiết lập */
+
     align-items: center;
     justify-content: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+/* CSS cho Masonry Layout */
+
+.masonry {
+  column-count: 3; /* Số lượng cột cho bố cục */
+  column-gap: 10px; /* Khoảng cách giữa các cột */
+  max-width: 1000px;
+  margin: 20px auto; /* Căn giữa Masonry Layout */
+}
+
+.masonry-item {
+  break-inside: avoid; /* Tránh ngắt giữa cột */
+  margin-bottom: 10px; /* Khoảng cách giữa các mục theo chiều dọc */
+}
+
+.masonry-item img {
+  width: 100%; /* Chiều rộng đầy đủ của phần tử cha */
+  height: auto; /* Giữ tỷ lệ khung hình */
+  display: block; /* Đảm bảo ảnh được hiển thị dưới dạng block-level element */
+  border-radius: 8px; /* Bo góc ảnh */
+}
+
+/* Responsive: Điều chỉnh số lượng cột trên các kích thước màn hình khác nhau */
+@media (max-width: 900px) {
+  .masonry {
+      column-count: 2; /* Giảm số lượng cột trên màn hình trung bình */
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry {
+      column-count: 1; /* Chỉ có 1 cột trên màn hình nhỏ */
+  }
+}
+
+.snowfall-flakes {
+  position: absolute;
+  z-index: 999999;
+  animation: fall 20s ease-in-out  infinite;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-1px);
+    opacity: 1; /* Hoặc loại bỏ dòng này nếu không cần */
+  }
+  to {
+    transform: translateY(300vh); 
+    opacity: 0.5; /* Hoặc loại bỏ dòng này nếu không cần */
+  }
 }
