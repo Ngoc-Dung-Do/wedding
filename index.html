@@ -9,6 +9,7 @@
 
 
         <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/timer.js"></script>
         <script src="/js/custom.js"></script>
 
         <!-- Google font API -->
@@ -16,63 +17,122 @@
         <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
         <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Great+Vibes&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="container">
-        <noscript>
-            You need to enable JavaScript to run this website.
-        </noscript>
+            <noscript>
+                You need to enable JavaScript to run this website.
+            </noscript>
 
-        <!-- header -->
-        <div class="fancy" id="heading">Dũng & Trang</div>
+            <!-- header -->
+            <div class="fancy" id="heading">Dũng & Trang</div>
 
-        <!-- overlay container -->
-        <div class="'carousel-container">
-        <!-- the carousel -->
-        <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <!-- overlay container -->
+            <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/images/NTD01779.jpg.webp" class="d-block w-100 carousel-img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/NTD01947.jpg.webp" class="d-block w-100 carousel-img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/NTD02411.jpg.webp" class="d-block w-100 carousel-img" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mycarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+                <!-- the overlay text -->
+                <div class="carousel-overlay lh-sm w-100">
+                    <p class="fancy stroke fs-1 text-wrap"
+                        style="text-align:center">
+                        <span>Ngọc Dũng</span>
+                        <br class="d-sm-none">
+                        <span>&nbsp;&&nbsp;</span>
+                        <br class="d-sm-none">
+                        <span>Minh Trang</span>
+                    </p>
+                    <!-- The timer -->
+                    <div style="margin-top: -1rem" class="d-sm-none"></div>
+                    <div class="stroke timer fs-2">
+                        <p class="timer-item text-center">
+                        <span id="timer-days"></span><br/>Ngày
+                        </p>
+                        <p class="timer-item text-center">
+                        <span id="timer-hours"></span><br/>Giờ
+                        </p>
+                        <p class="timer-item text-center">
+                        <span id="timer-minutes"></span><br/>Phút
+                        </p>
+                        <p class="timer-item text-center">
+                        <span id="timer-seconds"></span><br/>Giây
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/images/NTD01779.jpg.webp" class="d-block w-100 carousel-img" alt="...">
+
+            <!-- navigation bar -->
+            <nav class="nav">
+                <a href="#couple" class="nav-link">Cặp đôi</a>
+                <a class="nav-link">Ảnh cưới</a>
+                <a class="nav-link">Lời chúc</a>
+                <a class="nav-link">Tiệc cưới</a>
+                <a class="nav-link">Mừng cưới</a>
+            </nav>
+
+            <!-- cô dâu chú rể -->
+            <p class="section-title fancy">Cặp đôi</p>
+            <div id="couple" class="couple-container">
+                <div class="couple-row">
+                    <img src="images/groom.png" class="couple-block"/>
+                    <div id="groom-info" class="couple-block">
+                        <span class="fancy couple-name fs-3">Đỗ Ngọc Dũng</span>
+                        <span class="parent-title">Con ông:&nbsp;</span>
+                        <span class="parent-name">Đỗ Như Hiến</span>
+                        <span class="parent-title">Con bà:&nbsp;</span>
+                        <span class="parent-name">Nguyễn Thị Khởi</span>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="/images/NTD01947.jpg.webp" class="d-block w-100 carousel-img" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="/images/NTD02411.jpg.webp" class="d-block w-100 carousel-img" alt="...">
+                <div class="couple-row">
+                    <div id="bride-info" class="couple-block">
+                        <span class="fancy couple-name fs-3">Trần Thị Minh Trang</span>
+                        <span class="parent-title">Con ông:&nbsp;</span>
+                        <span class="parent-name">Trần Văn Nhơn</span>
+                        <span class="parent-title">Con bà:&nbsp;</span>
+                        <span class="parent-name">Vũ Thị Thúy</span>
+                    </div>
+                    <img src="images/bride.png" class="couple-block"/>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#mycarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
 
-        <!-- the overlay text -->
-        <div class="carousel-overlay">
-            <p class="fancy stroke">
-            Ngọc Dũng 
-            </p>
-            <p class="fancy stroke">
-            &
-            </p>
-            <p class="fancy stroke">
-            Minh Trang
-            </p>
-        </div>
-        </div>
+            <!-- cô dâu chú rể -->
+            <p class="section-title fancy">Ảnh cưới</p>
 
-        <footer>
-            Footer
-        </footer>
+            <!-- cô dâu chú rể -->
+            <p class="section-title fancy">Lời chúc</p>
+
+            <!-- address and time -->
+            <p class="section-title fancy">Sự kiện cưới</p>
+
+            <!-- QR -->
+            <div id="qr-modal"></div>
+
+            <footer>
+                Footer
+            </footer>
         </div>
     </body>
 </html>
