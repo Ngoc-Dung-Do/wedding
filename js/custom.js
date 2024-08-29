@@ -1,3 +1,8 @@
+const playMusic = () => {
+    var audio = new Audio('/musics/em-ve-tinh-khoi.mp3');
+    audio.play();
+}
+
 const initHeartEffect = () => {
     const numHeartsPerGroup = 5; // Số lượng trái tim trong mỗi nhóm
     const totalGroups = 10; // Tổng số nhóm bạn muốn tạo
@@ -71,6 +76,7 @@ const initTimer = () => {
 
 
 document.addEventListener( 'DOMContentLoaded', () => {
+    // playMusic();
     initHeartEffect()
     initTimer()
 });
