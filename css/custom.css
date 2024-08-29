@@ -13,6 +13,7 @@ body {
     font-family: "Alegreya", serif;
     font-optical-sizing: auto;
     font-weight: 400;
+    background-color: color-mix(in srgb, var(--color-wedding-1), #000 10%);
 }
 
 .fancy {
@@ -24,15 +25,11 @@ body {
 #heading {
     background: var(--color-wedding-1);
     font-size: var(--font-size-large);
-    min-height: 3rem;
+    min-height: 4rem;
     display: flex; 
+    font-family: 'Pinyon Script', cursive; /* Đảm bảo font đã được thiết lập */
     align-items: center;
     justify-content: center;
-}
-
-body {
-    background-color: color-mix(in srgb, var(--color-wedding-1), #000 10%);
-    min-height: 100vh;
 }
 
 .carousel-item  img { 
@@ -91,6 +88,7 @@ body {
  * Navigation
  */
 .nav {
+    width: 100%;
     display: flex;
     flex-direction:row;
     justify-content: space-around;
@@ -174,7 +172,8 @@ body {
 
 
 
-/* Sectioning
+/*
+ * Sectioning
  */
 .section-title {
     margin-top: 70px;
@@ -184,7 +183,58 @@ body {
     color: var(--color-wedding-4);
 }
 
-@media (max-width: 991px) {
-  .section-title {
-    margin-bottom: 42px;
+@media only screen and (max-width: 991px) {
+    .section-title {
+        margin-bottom: 42px;
+    }
+}
+
+/* CSS cho Masonry Layout */
+.masonry {
+  column-count: 3; /* Số lượng cột cho bố cục */
+  column-gap: 10px; /* Khoảng cách giữa các cột */
+  max-width: 70vw;
+  margin: 20px auto; /* Căn giữa Masonry Layout */
+}
+
+@media only screen and (max-width: 768px) {
+  .masonry {
+      column-count: 2; /* Giảm số lượng cột trên màn hình trung bình */
+      max-width: calc(100vw - 20px);
   }
+}
+
+@media only screen and (max-width: 512px) {
+  .masonry {
+      column-count: 1; /* Giảm số lượng cột trên màn hình trung bình */
+  }
+}
+
+.masonry-item {
+  break-inside: avoid; /* Tránh ngắt giữa cột */
+  margin-bottom: 10px; /* Khoảng cách giữa các mục theo chiều dọc */
+}
+
+.masonry-item img {
+  width: 100%; /* Chiều rộng đầy đủ của phần tử cha */
+  height: auto; /* Giữ tỷ lệ khung hình */
+  display: block; /* Đảm bảo ảnh được hiển thị dưới dạng block-level element */
+  border-radius: 8px; /* Bo góc ảnh */
+}
+
+.snowfall-flakes {
+    position: absolute;
+    z-index: 10;
+    animation: fall 20s ease-in-out infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-1px);
+        opacity: 1; /* Hoặc loại bỏ dòng này nếu không cần */
+    }
+    to {
+        transform: translateY(300vh); 
+        opacity: 0.5; /* Hoặc loại bỏ dòng này nếu không cần */
+    }
+}
