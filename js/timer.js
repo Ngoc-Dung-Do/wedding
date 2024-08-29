@@ -22,7 +22,6 @@ Timer.countDown = function() {
     else {
         this.days = 0
     }
-    console.log(this)
 }
 
 Timer.new = (targetDate) => {

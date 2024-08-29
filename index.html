@@ -8,6 +8,7 @@
         <link href="/css/custom.css" rel="stylesheet">
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/timer.js"></script>
+        <script src="/js/database.js"></script>
         <script src="/js/custom.js"></script>
 
         <!-- Google font API -->
@@ -29,20 +30,84 @@
             <!-- overlay container -->
             <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    
+                    <button
+                        type="button"
+                        data-bs-target="#mycarousel"
+                        data-bs-slide-to="1"
+                        
+                        class="active"
+                        
+                        aria-current="true"
+                        aria-label="Slide 1">
+                    </button>
+                    
+                    <button
+                        type="button"
+                        data-bs-target="#mycarousel"
+                        data-bs-slide-to="2"
+                        
+                        aria-current="true"
+                        aria-label="Slide 2">
+                    </button>
+                    
+                    <button
+                        type="button"
+                        data-bs-target="#mycarousel"
+                        data-bs-slide-to="3"
+                        
+                        aria-current="true"
+                        aria-label="Slide 3">
+                    </button>
+                    
+                    <button
+                        type="button"
+                        data-bs-target="#mycarousel"
+                        data-bs-slide-to="4"
+                        
+                        aria-current="true"
+                        aria-label="Slide 4">
+                    </button>
+                    
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/images/NTD02300.webp" class="d-block w-100 carousel-img" alt="...">
+                    
+                        
+                        <div class="carousel-item active" data="0">
+                        
+                        <img
+                        src="/images/carousel/NTD02411.webp"
+                        class="d-block w-100 carousel-img"
+                        alt="..." />
                     </div>
-                    <div class="carousel-item">
-                        <img src="/images/NTD01947.webp" class="d-block w-100 carousel-img" alt="...">
+                    
+                        
+                        <div class="carousel-item " data="1">
+                        
+                        <img
+                        src="/images/carousel/NTD02300.webp"
+                        class="d-block w-100 carousel-img"
+                        alt="..." />
                     </div>
-                    <div class="carousel-item">
-                        <img src="/images/NTD02411.webp" class="d-block w-100 carousel-img" alt="...">
+                    
+                        
+                        <div class="carousel-item " data="2">
+                        
+                        <img
+                        src="/images/carousel/NTD01947.webp"
+                        class="d-block w-100 carousel-img"
+                        alt="..." />
                     </div>
+                    
+                        
+                        <div class="carousel-item " data="3">
+                        
+                        <img
+                        src="/images/carousel/NTD01970.webp"
+                        class="d-block w-100 carousel-img"
+                        alt="..." />
+                    </div>
+                    
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -94,7 +159,7 @@
                 <a href="#mung-cuoi" class="nav-link">Mừng cưới</a>
             </nav>
 
-            <!-- cô dâu chú rể -->
+            <!-- couple introduction -->
             <p class="section-title fancy">Cặp đôi</p>
             <div id="couple" class="couple-container">
                 <div class="couple-row">
@@ -122,21 +187,165 @@
             <!-- cô dâu chú rể -->
             <p id="album" class="section-title fancy">Ảnh cưới</p>
             <div class="masonry">
-                <div class="masonry-item"><img src="images/NTD01647.webp" alt="Photo 1"></div>
-                <div class="masonry-item"><img src="images/NTD01663.webp" alt="Photo 2"></div>
-                <div class="masonry-item"><img src="images/NTD02313.webp" alt="Photo 3"></div>
-                <div class="masonry-item"><img src="images/NTD02275.webp" alt="Photo 4"></div>
-                <div class="masonry-item"><img src="images/NTD01779.webp" alt="Photo 4"></div>
-                <div class="masonry-item"><img src="images/NTD01855.webp" alt="Photo 4"></div>
-                <div class="masonry-item"><img src="images/NTD01947.webp" alt="Photo 4"></div>
-                <div class="masonry-item"><img src="images/NTD01970.webp" alt="Photo 4"></div>
-                <div class="masonry-item"><img src="images/NTD02300.webp" alt="Photo 4"></div>
-                <div class="masonry-item"><img src="images/NTD02411.webp" alt="Photo 4"></div>
-                <div class="masonry-item"><img src="images/NTD02572.webp" alt="Photo 4"></div>
-                <div class="masonry-item"><img src="images/NTD02595.webp" alt="Photo 4"></div>
-                <div class="masonry-item"><img src="images/NTD02648.webp" alt="Photo 4"></div>
-                <div class="masonry-item"><img src="images/NTD02786.webp" alt="Photo 4"></div>            
-                <div class="masonry-item"><img src="images/NTD02818.webp" alt="Photo 4"></div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD01647.webp" alt="/images/album/NTD01647.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD03133.webp" alt="/images/album/NTD03133.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD02411.webp" alt="/images/album/NTD02411.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD02300.webp" alt="/images/album/NTD02300.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD01855.webp" alt="/images/album/NTD01855.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD03157.webp" alt="/images/album/NTD03157.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD01663.webp" alt="/images/album/NTD01663.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD01947.webp" alt="/images/album/NTD01947.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD02786.webp" alt="/images/album/NTD02786.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD02818.webp" alt="/images/album/NTD02818.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD02823.webp" alt="/images/album/NTD02823.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD03188.webp" alt="/images/album/NTD03188.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD02572.webp" alt="/images/album/NTD02572.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD02980.webp" alt="/images/album/NTD02980.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD03214.webp" alt="/images/album/NTD03214.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD02313.webp" alt="/images/album/NTD02313.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD01970.webp" alt="/images/album/NTD01970.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD02275.webp" alt="/images/album/NTD02275.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD01779.webp" alt="/images/album/NTD01779.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD03080.webp" alt="/images/album/NTD03080.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD03418.webp" alt="/images/album/NTD03418.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD02595.webp" alt="/images/album/NTD02595.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD03072.webp" alt="/images/album/NTD03072.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <div class="masonry-item">
+                    <div class="overlay-hover">
+                        <img src="/images/album/NTD02648.webp" alt="/images/album/NTD02648.webp" class="album-img"/>
+                    </div>
+                </div>
+                
+                <!-- <div class="masonry-item"><img src="images/NTD01663.webp" alt="Photo 2"></div> -->
+                <!-- <div class="masonry-item"><img src="images/NTD02313.webp" alt="Photo 3"></div> -->
+                <!-- <div class="masonry-item"><img src="images/NTD02275.webp" alt="Photo 4"></div> -->
+                <!-- <div class="masonry-item"><img src="images/NTD01779.webp" alt="Photo 4"></div> -->
+                <!-- <div class="masonry-item"><img src="images/NTD01855.webp" alt="Photo 4"></div> -->
+                <!-- <div class="masonry-item"><img src="images/NTD01947.webp" alt="Photo 4"></div> -->
+                <!-- <div class="masonry-item"><img src="images/NTD01970.webp" alt="Photo 4"></div> -->
+                <!-- <div class="masonry-item"><img src="images/NTD02300.webp" alt="Photo 4"></div> -->
+                <!-- <div class="masonry-item"><img src="images/NTD02411.webp" alt="Photo 4"></div> -->
+                <!-- <div class="masonry-item"><img src="images/NTD02572.webp" alt="Photo 4"></div> -->
+                <!-- <div class="masonry-item"><img src="images/NTD02595.webp" alt="Photo 4"></div> -->
+                <!-- <div class="masonry-item"><img src="images/NTD02648.webp" alt="Photo 4"></div> -->
+                <!-- <div class="masonry-item"><img src="images/NTD02786.webp" alt="Photo 4"></div>             -->
+                <!-- <div class="masonry-item"><img src="images/NTD02818.webp" alt="Photo 4"></div> -->
                 <!-- Thêm các ảnh khác ở đây -->
             </div>
 
@@ -159,4 +368,3 @@
             </div>
     </body>
 </html>
-

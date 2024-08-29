@@ -227,11 +227,29 @@ body {
   margin-bottom: 10px; /* Khoảng cách giữa các mục theo chiều dọc */
 }
 
-.masonry-item img {
-  width: 100%; /* Chiều rộng đầy đủ của phần tử cha */
-  height: auto; /* Giữ tỷ lệ khung hình */
-  display: block; /* Đảm bảo ảnh được hiển thị dưới dạng block-level element */
-  border-radius: 8px; /* Bo góc ảnh */
+/* Image overlay hover */
+.overlay-hover {
+    cursor: pointer;
+    position: relative;
+}
+
+.album-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.overlay-hover:first-child:hover:after {
+    content: '_'; /* won't display unless there is content */
+    color: transparent;
+    position: absolute;
+    top: 0%; left: 0%; width: 100%; height: 100%;
+    background: white;
+    opacity: 0.1618;
+}
+
+.overlay-hover:first-child:hover:after {
 }
 
 .snowfall-flakes {

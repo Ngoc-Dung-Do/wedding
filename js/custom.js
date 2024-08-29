@@ -1,3 +1,34 @@
+// Carousel initialization
+// =======================
+const carouselItem = (imageLink, i) => {
+    const img = document.createElement("img")
+    img.src = imageLink
+    img.className = "d-block w-100 carousel-img"
+    img.alt = `image-${i}`
+
+    const div = document.createElement("div")
+    if (i > 0) {
+        div.className = "carousel-item"
+    } else {
+        div.className = "carousel-item active"
+    }
+    div.appendChild(img)
+
+    return div
+}
+
+const initCarousel = () => {
+    const cInner = document.querySelector(".carousel-inner")
+    carouselImages.forEach((imageLink, i) => {
+        const item = carouselItem(imageLink, i);
+        cInner.appendChild(item);
+    })
+
+    const carousel = new bootstrap.Carousel('#mycarousel')
+    carousel.cycle()
+}
+
+
 const playMusic = () => {
     var audio = new Audio('/musics/em-ve-tinh-khoi.mp3');
     audio.play();
@@ -53,7 +84,6 @@ const initTimer = () => {
     let eHours = document.querySelector('#timer-hours')
     let eMinutes = document.querySelector('#timer-minutes')
     let eSeconds = document.querySelector('#timer-seconds')
-    console.log(eDays)
 
     let updateTimer = () => {
         eDays.innerText = timer.days.toString().padStart(2, "0");
