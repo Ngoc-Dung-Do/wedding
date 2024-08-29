@@ -114,7 +114,6 @@ body {
     text-transform: uppercase;
 }
 
-
 .parent-name:after, .couple-name:after {
     content:"\a";
     white-space: pre;
@@ -152,7 +151,7 @@ body {
     background-color: var(--color-wedding-1);
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1000px) {
     .couple-row {
         width: 100%;
     }
