@@ -1,0 +1,4 @@
+[submodule "wedding"]
+	path = wedding
+	url = git@github.com:Ngoc-Dung-Do/wedding.git
+	branch = master
