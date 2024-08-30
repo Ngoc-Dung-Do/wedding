@@ -30,8 +30,8 @@ const initCarousel = () => {
 
 /* Setup music button */
 /* ================== */
-const initMusic = () => {
-    const audio = new Audio('/musics/em-ve-tinh-khoi.mp3');
+const initMusic = (ctx) => {
+    const audio = new Audio(`${ctx.musicDir}/em-ve-tinh-khoi.mp3`);
     const audioButton = document.querySelector('#music-button')
     const audioIcon = document.querySelector('#music-button-icon')
 
@@ -54,7 +54,7 @@ const initMusic = () => {
 
 // Falling sprites
 // ===============
-const initHeartEffect = () => {
+const initHeartEffect = (ctx) => {
     const numHeartsPerGroup = 1; // Số lượng trái tim trong mỗi nhóm
     const totalGroups = 100; // Tổng số nhóm bạn muốn tạo
     const fallInterval = 200; // Khoảng thời gian giữa các nhóm trái tim (2 giây)
@@ -72,7 +72,7 @@ const initHeartEffect = () => {
         'math-4.png',
         'math-5.png',
         'math-6.png',
-    ]
+    ].map(img => `${ctx.spriteDir}/${img}`)
 
     const hearts = [
         "heart-1.svg",
@@ -80,7 +80,7 @@ const initHeartEffect = () => {
         "heart-3.png",
         "heart-4.png",
         "heart-5.svg",
-    ]
+    ].map(img => `${ctx.spriteDir}/${img}`)
 
     const randChoice = (lst) => {
         let n = lst.length;
@@ -95,9 +95,9 @@ const initHeartEffect = () => {
         for (let i = 0; i < numHeartsPerGroup; i++) {
             const heart = document.createElement('img');
             if (Math.random() < 0.6667) {
-                heart.src = `/images/icons/${randChoice(hearts)}`;
+                heart.src = randChoice(hearts);
             } else {
-                heart.src = `/images/icons/${randChoice(choices)}`;
+                heart.src = randChoice(choices);
             }
             heart.className = 'snowfall-flakes';
             heart.style.position = `fixed`; // Đặt kích thước ngẫu nhiên
@@ -170,10 +170,22 @@ const initGallery = () => {
     })
 }
 
+// meta variables
+const getMetaVar = (name) => {
+    let elem = document.querySelector(`meta[name="${name}"]`)
+    return elem.content
+}
+
 document.addEventListener( 'DOMContentLoaded', () => {
     // playMusic();
-    initMusic();
-    initHeartEffect();
+    const ctx = {
+        slug: getMetaVar('slug'),
+        spriteDir: getMetaVar('sprite-dir'),
+        musicDir: getMetaVar('music-dir'),
+    }
+
+    initMusic(ctx);
+    initHeartEffect(ctx);
     initTimer();
     initGallery();
 });
