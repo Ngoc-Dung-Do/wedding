@@ -57,10 +57,38 @@ const initMusic = () => {
 }
 
 const initHeartEffect = () => {
-    const numHeartsPerGroup = 5; // Số lượng trái tim trong mỗi nhóm
+    const numHeartsPerGroup = 3; // Số lượng trái tim trong mỗi nhóm
     const totalGroups = 10; // Tổng số nhóm bạn muốn tạo
     const fallInterval = 5000; // Khoảng thời gian giữa các nhóm trái tim (2 giây)
     const animationDuration = 15; // Thay đổi thời gian hoạt hình tại đây
+    const choices = [
+        'chem-1.png',
+        'chem-2.png',
+        'chem-3.png',
+        'chem-4.png',
+        'chem-5.png',
+        'chem-6.svg',
+        'math-1.png',
+        'math-2.png',
+        'math-3.png',
+        'math-4.png',
+        'math-5.png',
+        'math-6.png',
+    ]
+
+    const hearts = [
+        "heart-1.svg",
+        "heart-2.svg",
+        "heart-3.png",
+        "heart-4.png",
+        "heart-5.svg",
+    ]
+
+    const randChoice = (lst) => {
+        let n = lst.length;
+        let i = Math.floor(Math.random() * n);
+        return lst[i]
+    }
 
     function createHearts() {
         const viewportHeight = window.innerHeight;
@@ -68,10 +96,14 @@ const initHeartEffect = () => {
 
         for (let i = 0; i < numHeartsPerGroup; i++) {
             const heart = document.createElement('img');
-            heart.src = '/images/icons/heart.png';
+            if (Math.random() < 0.6667) {
+                heart.src = `/images/icons/${randChoice(hearts)}`;
+            } else {
+                heart.src = `/images/icons/${randChoice(choices)}`;
+            }
             heart.className = 'snowfall-flakes';
             heart.style.position = `fixed`; // Đặt kích thước ngẫu nhiên
-            heart.style.width = `${Math.random() * 30 + 10}px`; // Đặt kích thước ngẫu nhiên
+            heart.style.width = `${Math.random() * 40 + 20}px`; // Đặt kích thước ngẫu nhiên
             heart.style.left = `${Math.random() * 100}vw`; // Đặt vị trí ngẫu nhiên trên trục ngang
             heart.style.top = `-${Math.random() * viewportHeight}px`; // Bắt đầu từ vị trí trên cùng
 

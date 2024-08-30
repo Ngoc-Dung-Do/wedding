@@ -11,6 +11,9 @@
         <script src="/js/database.js"></script>
         <script src="/js/custom.js"></script>
 
+        <!-- icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
         <!-- Google font API -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
@@ -353,18 +356,93 @@
             <p id="wishes" class="section-title fancy">Lời chúc</p>
 
             <!-- address and time -->
-            <p id="events" class="section-title fancy">Sự kiện cưới</p>
+            <p id="events" class="section-title fancy">Tiệc cưới&nbsp;&&nbsp;lễ thành hôn</p>
+            <section class="event-container">
+                <!-- groom's house event -->
+                <div class="wedding-event">
+                    <!-- the map -->
+                    <div class="iframe-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59572.92154579399!2d105.48013112372361!3d21.060373382562677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345f37edc0159f%3A0xbbc7b78946254831!2zNzUgxJBUNDE2LCBUcnVuZyBTxqFuIFRy4bqnbSwgU8ahbiBUw6J5LCBIw6AgTuG7mWksIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1725000804234!5m2!1sen!2s"
+                            width="400px" height="200px"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-100"></iframe>
+                    </div>
+                    <!-- event info -->
+                    <div class="event-info">
+                        <header>nhà trai</header>
+                        <div class="with-icon">
+                            <span class="material-symbols-outlined">
+                                schedule
+                            </span>
+                            <span class="event-time">
+                                Thứ 4, ngày abc, xyz
+                            </span>
+                        </div>
+                        <div class="with-icon">
+                            <span class="material-symbols-outlined">
+                                location_on
+                            </span>
+                            <span class="event-location">
+                                Số nhà 75, Ngõ 272, Đường 416, Khu Tập thể HVPKKQ, Kim Sơn, Sơn Tây, Hà Nội
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- bride's house event -->
+                <div class="wedding-event">
+                    <!-- map -->
+                    <div class="iframe-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59572.92154579399!2d105.48013112372361!3d21.060373382562677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345f37edc0159f%3A0xbbc7b78946254831!2zNzUgxJBUNDE2LCBUcnVuZyBTxqFuIFRy4bqnbSwgU8ahbiBUw6J5LCBIw6AgTuG7mWksIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1725000804234!5m2!1sen!2s"
+                        width="400" height="200"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="w-100"></iframe>
+                    </div>
+                    <!-- event info -->
+                    <div class="event-info">
+                            <br>
+                        <header>nhà gái</header>
+                        <div class="with-icon">
+                            <span class="material-symbols-outlined">
+                                schedule
+                            </span>
+                            <span class="event-time">
+                                Thứ 4, ngày abc, xyz
+                            </span>
+                        </div>
+                        <div class="with-icon">
+                            <span class="material-symbols-outlined">
+                                location_on
+                            </span>
+                            <span class="event-location">
+                                Thảo Nguyên Resort, Quốc Lộ 6, Mộc Châu, Sơn La
+                            </span>
+                        </div>
+                    </div>
+                    <div>&nbsp;</div>
+                </div>
+            </section>
 
             <!-- QR -->
             <div id="qr-modal"></div>
 
-            <footer>
-                <div class="w-100">
-                    <img src="images/NTD02411.webp" style="max-width: 100vw"/>
-                </div>
+            <footer 
+                style="background-image: url('/images/album/NTD01947.webp');">
+            >
             </footer>
 
-            <div id="audio-button">
+            <!-- music playing button -->
+            <div class="overlay-hover">
+                <div id="music-button" align="center">
+                    <span class="material-symbols-outlined"
+                        id="music-button-icon">
+                        music_note
+                    </span>
+                </div>
             </div>
     </body>
 </html>
