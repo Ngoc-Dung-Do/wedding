@@ -57,9 +57,9 @@ const initMusic = () => {
 }
 
 const initHeartEffect = () => {
-    const numHeartsPerGroup = 3; // Số lượng trái tim trong mỗi nhóm
-    const totalGroups = 10; // Tổng số nhóm bạn muốn tạo
-    const fallInterval = 5000; // Khoảng thời gian giữa các nhóm trái tim (2 giây)
+    const numHeartsPerGroup = 1; // Số lượng trái tim trong mỗi nhóm
+    const totalGroups = 100; // Tổng số nhóm bạn muốn tạo
+    const fallInterval = 200; // Khoảng thời gian giữa các nhóm trái tim (2 giây)
     const animationDuration = 15; // Thay đổi thời gian hoạt hình tại đây
     const choices = [
         'chem-1.png',
