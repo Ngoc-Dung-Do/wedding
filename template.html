@@ -62,10 +62,9 @@
                         {% else %}
                         <div class="carousel-item " data="{{loop.index0}}">
                         {% endif %}
-                        <img
-                        src="{{ link }}"
-                        class="d-block w-100 carousel-img"
-                        alt="..." />
+                        <div class="carousel-crop"
+                            style="background-image: url({{ link }})">
+                        </div>
                     </div>
                     {% endfor %}
                 </div>
