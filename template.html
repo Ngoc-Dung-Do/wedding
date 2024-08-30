@@ -11,6 +11,15 @@
         <script src="/js/database.js"></script>
         <script src="/js/custom.js"></script>
 
+        <!-- lightgallery plugins -->
+        <link rel="stylesheet" href="/css/lightgallery-bundle.css" />
+        <script src="/js/lightgallery.min.js"></script>
+        <script src="/js/lg-autoplay.min.js"></script>
+        <script src="/js/lg-fullscreen.min.js"></script>
+        <script src="/js/lg-zoom.min.js"></script>
+        <script src="/js/lg-thumbnail.min.js"></script>
+
+
         <!-- icons -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
@@ -28,7 +37,7 @@
             </noscript>
 
             <!-- header -->
-            <div class="fancy fs-2" id="heading">Dũng & Trang</div>
+            <!-- <div class="fancy fs-2" id="heading">Dũng & Trang</div> -->
 
             <!-- overlay container -->
             <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
@@ -111,138 +120,147 @@
             </nav>
 
             <!-- couple introduction -->
-            <p class="section-title fancy">Cặp đôi</p>
-            <div id="couple" class="couple-container">
-                <div class="couple-row">
-                    <img src="/images/groom.png" class="couple-block"/>
-                    <div id="groom-info" class="couple-block">
-                        <span class="fancy couple-name fs-3">Đỗ Ngọc Dũng</span>
-                        <span class="parent-title">Con ông:&nbsp;</span>
-                        <span class="parent-name">Đỗ Như Hiến</span>
-                        <span class="parent-title">Con bà:&nbsp;</span>
-                        <span class="parent-name">Nguyễn Thị Khởi</span>
-                    </div>
-                </div>
-                <div class="couple-row">
-                    <div id="bride-info" class="couple-block">
-                        <span class="fancy couple-name fs-3">Trần Thị Minh Trang</span>
-                        <span class="parent-title">Con ông:&nbsp;</span>
-                        <span class="parent-name">Trần Văn Nhơn</span>
-                        <span class="parent-title">Con bà:&nbsp;</span>
-                        <span class="parent-name">Vũ Thị Thúy</span>
-                    </div>
-                    <img src="/images/bride.png" class="couple-block"/>
-                </div>
-            </div>
-
-            <!-- cô dâu chú rể -->
-            <p id="album" class="section-title fancy">Ảnh cưới</p>
-            <div class="masonry">
-                {% for link in album_images %}
-                <div class="masonry-item">
-                    <div class="overlay-hover">
-                        <img src="{{ link }}" alt="{{link}}" class="album-img"/>
-                    </div>
-                </div>
-                {% endfor %}
-                <!-- <div class="masonry-item"><img src="images/NTD01663.webp" alt="Photo 2"></div> -->
-                <!-- <div class="masonry-item"><img src="images/NTD02313.webp" alt="Photo 3"></div> -->
-                <!-- <div class="masonry-item"><img src="images/NTD02275.webp" alt="Photo 4"></div> -->
-                <!-- <div class="masonry-item"><img src="images/NTD01779.webp" alt="Photo 4"></div> -->
-                <!-- <div class="masonry-item"><img src="images/NTD01855.webp" alt="Photo 4"></div> -->
-                <!-- <div class="masonry-item"><img src="images/NTD01947.webp" alt="Photo 4"></div> -->
-                <!-- <div class="masonry-item"><img src="images/NTD01970.webp" alt="Photo 4"></div> -->
-                <!-- <div class="masonry-item"><img src="images/NTD02300.webp" alt="Photo 4"></div> -->
-                <!-- <div class="masonry-item"><img src="images/NTD02411.webp" alt="Photo 4"></div> -->
-                <!-- <div class="masonry-item"><img src="images/NTD02572.webp" alt="Photo 4"></div> -->
-                <!-- <div class="masonry-item"><img src="images/NTD02595.webp" alt="Photo 4"></div> -->
-                <!-- <div class="masonry-item"><img src="images/NTD02648.webp" alt="Photo 4"></div> -->
-                <!-- <div class="masonry-item"><img src="images/NTD02786.webp" alt="Photo 4"></div>             -->
-                <!-- <div class="masonry-item"><img src="images/NTD02818.webp" alt="Photo 4"></div> -->
-                <!-- Thêm các ảnh khác ở đây -->
-            </div>
-
-            <!-- cô dâu chú rể -->
-            <p id="wishes" class="section-title fancy">Lời chúc</p>
-
-            <!-- address and time -->
-            <p id="events" class="section-title fancy">Tiệc cưới&nbsp;&&nbsp;lễ thành hôn</p>
-            <section class="event-container">
-                <!-- groom's house event -->
-                <div class="wedding-event">
-                    <!-- the map -->
-                    <div class="iframe-map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59572.92154579399!2d105.48013112372361!3d21.060373382562677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345f37edc0159f%3A0xbbc7b78946254831!2zNzUgxJBUNDE2LCBUcnVuZyBTxqFuIFRy4bqnbSwgU8ahbiBUw6J5LCBIw6AgTuG7mWksIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1725000804234!5m2!1sen!2s"
-                            width="400px" height="200px"
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            class="w-100"></iframe>
-                    </div>
-                    <!-- event info -->
-                    <div class="event-info">
-                        <header>nhà trai</header>
-                        <div class="with-icon">
-                            <span class="material-symbols-outlined">
-                                schedule
-                            </span>
-                            <span class="event-time">
-                                Thứ 4, ngày abc, xyz
-                            </span>
-                        </div>
-                        <div class="with-icon">
-                            <span class="material-symbols-outlined">
-                                location_on
-                            </span>
-                            <span class="event-location">
-                                Số nhà 75, Ngõ 272, Đường 416, Khu Tập thể HVPKKQ, Kim Sơn, Sơn Tây, Hà Nội
-                            </span>
+            <section class="section" id="section-couple">
+                <p class="section-title fancy" style="margin-top: 1.5rem">Cặp đôi</p>
+                <div id="couple" class="couple-container">
+                    <div class="couple-row">
+                        <img src="/images/groom.png" class="couple-block"/>
+                        <div id="groom-info" class="couple-block">
+                            <span class="fancy couple-name">Đỗ Ngọc Dũng</span>
+                            <span class="parent-title">Con ông:&nbsp;</span>
+                            <span class="parent-name">Đỗ Như Hiến</span>
+                            <span class="parent-title">Con bà:&nbsp;</span>
+                            <span class="parent-name">Nguyễn Thị Khởi</span>
                         </div>
                     </div>
-                </div>
-
-                <!-- bride's house event -->
-                <div class="wedding-event">
-                    <!-- map -->
-                    <div class="iframe-map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59572.92154579399!2d105.48013112372361!3d21.060373382562677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345f37edc0159f%3A0xbbc7b78946254831!2zNzUgxJBUNDE2LCBUcnVuZyBTxqFuIFRy4bqnbSwgU8ahbiBUw6J5LCBIw6AgTuG7mWksIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1725000804234!5m2!1sen!2s"
-                        width="400" height="200"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        class="w-100"></iframe>
-                    </div>
-                    <!-- event info -->
-                    <div class="event-info">
-                            <br>
-                        <header>nhà gái</header>
-                        <div class="with-icon">
-                            <span class="material-symbols-outlined">
-                                schedule
-                            </span>
-                            <span class="event-time">
-                                Thứ 4, ngày abc, xyz
-                            </span>
+                    <div class="couple-row">
+                        <div id="bride-info" class="couple-block">
+                            <span class="fancy couple-name">Trần Thị Minh Trang</span>
+                            <span class="parent-title">Con ông:&nbsp;</span>
+                            <span class="parent-name">Trần Văn Nhơn</span>
+                            <span class="parent-title">Con bà:&nbsp;</span>
+                            <span class="parent-name">Vũ Thị Thúy</span>
                         </div>
-                        <div class="with-icon">
-                            <span class="material-symbols-outlined">
-                                location_on
-                            </span>
-                            <span class="event-location">
-                                Thảo Nguyên Resort, Quốc Lộ 6, Mộc Châu, Sơn La
-                            </span>
-                        </div>
+                        <img src="/images/bride.png" class="couple-block"/>
                     </div>
-                    <div>&nbsp;</div>
                 </div>
             </section>
 
-            <!-- QR -->
-            <div id="qr-modal"></div>
+            <!-- cô dâu chú rể -->
+            <section id="section-gallery" class="section">
+                <p id="album" class="section-title fancy">Ảnh cưới</p>
+                <div class="masonry" id="lightgallery">
+                    {% for link in album_images %}
+                    <a class="masonry-item" href="{{link}}">
+                        <div class="overlay-hover">
+                            <img
+                            src="{{ link }}" alt="Ảnh {{ loop.index0 }}" class="album-img"
+                            {% if loop.index0 >= 7 %}
+                            style="display: none"
+                            {% endif %}
+                            />
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+                <button
+                    id="gallery-view-more"
+                    type="button"
+                    class="btn btn-primary">
+                    Xem thêm
+                </button>
+            </section>
 
-            <footer 
-                style="background-image: url('/{{ footer_image }}');">
-            >
+            <!-- cô dâu chú rể -->
+            <section id="section-wishes" class="section">
+                <p id="wishes" class="section-title fancy">Lời chúc</p>
+            </section>
+
+            <!-- address and time -->
+            <section id="section-events" class="section">
+                <p id="events" class="section-title fancy">Tiệc cưới&nbsp;&&nbsp;lễ thành hôn</p>
+                <div class="event-container">
+                    <!-- groom's house event -->
+                    <div class="wedding-event">
+                        <!-- the map -->
+                        <div class="iframe-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59572.92154579399!2d105.48013112372361!3d21.060373382562677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345f37edc0159f%3A0xbbc7b78946254831!2zNzUgxJBUNDE2LCBUcnVuZyBTxqFuIFRy4bqnbSwgU8ahbiBUw6J5LCBIw6AgTuG7mWksIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1725000804234!5m2!1sen!2s"
+                                width="400px" height="200px"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="w-100"></iframe>
+                        </div>
+                        <!-- event info -->
+                        <div class="event-info">
+                            <header>nhà trai</header>
+                            <div class="with-icon">
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                </span>
+                                <span class="event-time">
+                                    Thứ 4, ngày abc, xyz
+                                </span>
+                            </div>
+                            <div class="with-icon">
+                                <span class="material-symbols-outlined">
+                                    location_on
+                                </span>
+                                <span class="event-location">
+                                    Số nhà 75, Ngõ 272, Đường 416, Khu Tập thể HVPKKQ, Kim Sơn, Sơn Tây, Hà Nội
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- bride's house event -->
+                    <div class="wedding-event">
+                        <!-- map -->
+                        <div class="iframe-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59572.92154579399!2d105.48013112372361!3d21.060373382562677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345f37edc0159f%3A0xbbc7b78946254831!2zNzUgxJBUNDE2LCBUcnVuZyBTxqFuIFRy4bqnbSwgU8ahbiBUw6J5LCBIw6AgTuG7mWksIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1725000804234!5m2!1sen!2s"
+                                width="400" height="200"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="w-100"></iframe>
+                        </div>
+                        <!-- event info -->
+                        <div class="event-info">
+                            <br>
+                            <header>nhà gái</header>
+                            <div class="with-icon">
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                </span>
+                                <span class="event-time">
+                                    Thứ 4, ngày abc, xyz
+                                </span>
+                            </div>
+                            <div class="with-icon">
+                                <span class="material-symbols-outlined">
+                                    location_on
+                                </span>
+                                <span class="event-location">
+                                    Thảo Nguyên Resort, Quốc Lộ 6, Mộc Châu, Sơn La
+                                </span>
+                            </div>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- footer image -->
+            <footer id="footer-container">
+                <div
+                    id="footer-img"
+                    style="background-image: url('/{{ footer_image }}');">
+                </div>
+                <div id="footer-overlay">
+                </div>
+                <div id="footer-heart">
+                    <img src="/images/icons/heart-white.svg" width="100%"/>
+                </div>
             </footer>
 
             <!-- music playing button -->

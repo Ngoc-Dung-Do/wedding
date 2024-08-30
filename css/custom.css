@@ -121,12 +121,14 @@ body {
     display: flex;
     flex-direction:row;
     justify-content: space-around;
-    background-color: var(--color-wedding-2);
+    background-color: #212321;
 }
 
 .nav-link {
     display: block;
-    color: var(--color-wedding-3);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 /*
@@ -138,6 +140,10 @@ body {
     justify-content: space-evenly;
 }
 
+.couple-name {
+    font-size: 1.5rem;
+}
+
 .parent-name {
     font-weight: bold;
     text-transform: uppercase;
@@ -146,6 +152,21 @@ body {
 .parent-name:after, .couple-name:after {
     content:"\a";
     white-space: pre;
+}
+
+/* Bride and groom info background image */
+#bride-info, #groom-info  {
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center 90%;
+}
+#groom-info { background-image: url("/images/flower-bg-left.png"); }
+#bride-info { background-image: url("/images/flower-bg-right.png"); }
+
+@media only screen and (max-width: 512px) {
+    #bride-info, #groom-info  {
+        min-height: 250px;
+    }
 }
 
 #groom-info {
@@ -177,12 +198,19 @@ body {
 
 .couple-block {
     width: 50%;
-    background-color: var(--color-wedding-1);
+    /* background-color: var(--color-wedding-1); */
+    /* background: #fcf4dd; */
+    /* background-color: rgba(100%, 100%, 100%, 0.3); */
 }
+
 
 @media only screen and (max-width: 1000px) {
     .couple-row {
         width: 100%;
+    }
+
+    .couple-block {
+        background-color: inherit;
     }
 }
 
@@ -200,21 +228,43 @@ body {
 
 
 
-/*
- * Sectioning
- */
-.section-title {
-    margin-top: 70px;
-    margin-bottom: 50px;
-    text-align: center;
-    font-size: 3rem;
-    color: var(--color-wedding-4);
+
+/* Section theming */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 50px;
 }
 
-@media only screen and (max-width: 991px) {
-    .section-title {
-        margin-bottom: 42px;
-    }
+@media only screen and (max-width: 768px) {
+    .section { padding-bottom: 42px; }
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    background-size: auto 100% ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('/images/floral-heading-10.png');
+}
+
+/* Alice
+ * #e8dff5 
+ * #fce1e4 
+ * #fcf4dd 
+ * #ddedea 
+ * #daeaf6
+ */
+#section-couple { background: #e8dff5; padding: 0px; }
+#section-gallery { background: #daeaf6; }
+#section-wishes { background: #ddedea; }
+#section-events { background: #fce1e4; }
+
+#gallery-view-more {
+    align-self: center;
 }
 
 /* CSS cho Masonry Layout */
@@ -239,8 +289,9 @@ body {
 }
 
 .masonry-item {
-  break-inside: avoid; /* Tránh ngắt giữa cột */
-  margin-bottom: 10px; /* Khoảng cách giữa các mục theo chiều dọc */
+    display: block;
+    break-inside: avoid; /* Tránh ngắt giữa cột */
+    margin-bottom: 10px; /* Khoảng cách giữa các mục theo chiều dọc */
 }
 
 /* Image overlay hover */
@@ -377,11 +428,11 @@ body {
 
 
 /* Footer */
-footer img {
-    width: 100%;
+#footer-container {
+    position: relative;
 }
 
-footer {
+#footer-img {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -389,3 +440,21 @@ footer {
     background-position: center center;
 }
 
+#footer-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 30%;
+    background: black;
+}
+
+#footer-heart {
+    position: absolute;
+    opacity: 70%;
+    top: 60%;
+    left: 50%;
+    width: 10rem;
+    height: auto;
+    transform: translate(-50%, -50%);
+}

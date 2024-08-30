@@ -29,11 +29,7 @@ const initCarousel = () => {
 }
 
 /* Setup music button */
-const playMusic = () => {
-    var audio = new Audio('/musics/em-ve-tinh-khoi.mp3');
-    audio.play();
-}
-
+/* ================== */
 const initMusic = () => {
     const audio = new Audio('/musics/em-ve-tinh-khoi.mp3');
     const audioButton = document.querySelector('#music-button')
@@ -56,6 +52,8 @@ const initMusic = () => {
     audioButton.addEventListener("click", update);
 }
 
+// Falling sprites
+// ===============
 const initHeartEffect = () => {
     const numHeartsPerGroup = 1; // Số lượng trái tim trong mỗi nhóm
     const totalGroups = 100; // Tổng số nhóm bạn muốn tạo
@@ -131,6 +129,8 @@ const initHeartEffect = () => {
     startFallingHearts();
 };
 
+// Countdown
+// =========
 const initTimer = () => {
     let tgDate = new Date(2024, 8, 24, 0, 0);
     let timer = Timer.new(tgDate)
@@ -158,11 +158,23 @@ const initTimer = () => {
     // splide.mount();
 }
 
+// Gallery
+const initGallery = () => {
+    let gallery = lightGallery(document.getElementById('lightgallery'), {
+        plugins: [lgZoom, lgThumbnail, lgAutoplay],
+        speed: 500,
+    });
+    let btnViewGallery = document.getElementById("gallery-view-more")
+    btnViewGallery.addEventListener("click", () => {
+        gallery.openGallery(8)
+    })
+}
 
 document.addEventListener( 'DOMContentLoaded', () => {
     // playMusic();
     initMusic();
-    initHeartEffect()
-    initTimer()
+    initHeartEffect();
+    initTimer();
+    initGallery();
 });
-  
+
