@@ -31,13 +31,13 @@ with open("js/database.js", "w", encoding="utf-8") as f:
     content = "\n".join(images)
     f.write(content)
 
-
 env = Environment(loader=FileSystemLoader("."))
 template = env.get_template("template.html")
 rendered = template.render(
     album_images=get_files("images/album/"),
     carousel_images=get_files("images/carousel/"),
+    footer_image="images/album/NTD01947.webp",
 )
-print(get_files("images/carousel/"))
+
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(rendered)
