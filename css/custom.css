@@ -22,9 +22,9 @@ body {
 }
 
 .fancy {
-  font-family: "Great Vibes", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .with-icon {
@@ -114,10 +114,7 @@ body {
 /*     } */
 /* } */
 
-/*
- * Timer CSS
- * =========
- */
+/* Timer CSS */
 .timer {
     display: flex;
     flex-direction: row;
@@ -125,9 +122,7 @@ body {
     gap: 10%;
 }
 
-/*
- * Navigation
- */
+/* Navigation */
 .nav {
     width: 100%;
     display: flex;
@@ -144,9 +139,7 @@ body {
     font-weight: 600;
 }
 
-/*
- * Bride and groom
- */
+/* Bride and groom */
 #couple {
     display: flex;
     flex-wrap: wrap;
@@ -269,8 +262,8 @@ body {
  * #fce1e4 
  * #fcf4dd 
  * #ddedea 
- * #daeaf6
- */
+ * #daeaf6 */
+
 #section-couple { background: #e8dff5; padding: 0px; }
 #section-gallery { background: #daeaf6; }
 #section-wishes { background: #ddedea; }
@@ -282,23 +275,34 @@ body {
 
 /* CSS cho Masonry Layout */
 .masonry {
-  column-count: 3; /* Số lượng cột cho bố cục */
-  column-gap: 10px; /* Khoảng cách giữa các cột */
-  max-width: 70vw;
-  margin: 20px auto; /* Căn giữa Masonry Layout */
+    column-count: 3; /* Số lượng cột cho bố cục */
+    column-gap: 10px; /* Khoảng cách giữa các cột */
+    max-width: 70vw;
+    margin: 20px auto; /* Căn giữa Masonry Layout */
+}
+
+/* Limit the number of displayed elements */
+.masonry .masonry-item:nth-child(n + 8) {
+    display: none;
 }
 
 @media only screen and (max-width: 768px) {
-  .masonry {
-      column-count: 2; /* Giảm số lượng cột trên màn hình trung bình */
-      max-width: calc(100vw - 20px);
-  }
+    .masonry {
+        column-count: 2; /* Giảm số lượng cột trên màn hình trung bình */
+        max-width: calc(100vw - 20px);
+    }
+    .masonry .masonry-item:nth-child(n + 6) {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 512px) {
-  .masonry {
-      column-count: 1; /* Giảm số lượng cột trên màn hình trung bình */
-  }
+    .masonry {
+        column-count: 1; /* Giảm số lượng cột trên màn hình trung bình */
+    }
+    .masonry .masonry-item:nth-child(n + 4) {
+        display: none;
+    }
 }
 
 .masonry-item {
@@ -329,9 +333,6 @@ body {
     opacity: 0.1618;
 }
 
-.overlay-hover:first-child:hover:after {
-}
-
 .snowfall-flakes {
     position: absolute;
     z-index: 10;
@@ -340,9 +341,9 @@ body {
 
 
 @keyframes rotate {
-  100% {
-      transform: rotate(180deg);
-  }
+    100% {
+        transform: rotate(180deg);
+    }
 }
 
 @keyframes fall {
@@ -373,12 +374,6 @@ body {
     z-index: 10;
 }
 
-/* @media only screen and (max-width: 768px) { */
-/*     #music-button { */
-/*         bottom: 10%; right: 10%; */
-/*     } */
-/* } */
-
 /* Wedding event */
 .event-container {
     display: flex;
@@ -405,19 +400,19 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .wedding-event {
-      width: min(275px, 100%);
-      aspectratio: 1 / 1.618;
-      margin: auto;
-      margin-bottom: 1rem;
-  }
+    .wedding-event {
+        width: min(275px, 100%);
+        aspectratio: 1 / 1.618;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
 
-  .event-container {
-      display: block;
-      margin: auto;
-      max-width: none;
-      margin: 0 1rem 1rem 1rem;
-  }
+    .event-container {
+        display: block;
+        margin: auto;
+        max-width: none;
+        margin: 0 1rem 1rem 1rem;
+    }
 }
 
 

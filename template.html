@@ -2,29 +2,31 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
+        <meta name="slug" content="/wedding"/>
+        <meta name="sprite-dir" content="/wedding/images/icons/"/>
+        <meta name="music-dir" content="/wedding/musics/"/>
+
         <title>Dũng & Trang</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/custom.css" rel="stylesheet">
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/timer.js"></script>
-        <script src="js/custom.js"></script>
+        <link href="/wedding/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/wedding/css/custom.css" rel="stylesheet">
+        <script src="/wedding/js/bootstrap.min.js"></script>
+        <script src="/wedding/js/timer.js"></script>
+        <script src="/wedding/js/custom.js"></script>
 
         <!-- lightgallery plugins -->
-        <link rel="stylesheet" href="css/lightgallery-bundle.css" />
-        <script src="js/lightgallery.min.js"></script>
-        <script src="js/lg-autoplay.min.js"></script>
-        <script src="js/lg-fullscreen.min.js"></script>
-        <script src="js/lg-zoom.min.js"></script>
-        <script src="js/lg-thumbnail.min.js"></script>
+        <link rel="stylesheet" href="/wedding/css/lightgallery-bundle.css" />
+        <script src="/wedding/js/lightgallery.min.js"></script>
+        <script src="/wedding/js/lg-autoplay.min.js"></script>
+        <script src="/wedding/js/lg-fullscreen.min.js"></script>
+        <script src="/wedding/js/lg-zoom.min.js"></script>
+        <script src="/wedding/js/lg-thumbnail.min.js"></script>
 
         <!-- icons -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
         <!-- Google font API -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-        <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Great+Vibes&display=swap" rel="stylesheet">
     </head>
@@ -33,9 +35,6 @@
             <noscript>
                 You need to enable JavaScript to run this website.
             </noscript>
-
-            <!-- header -->
-            <!-- <div class="fancy fs-2" id="heading">Dũng & Trang</div> -->
 
             <!-- overlay container -->
             <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
@@ -61,7 +60,7 @@
                         <div class="carousel-item " data="{{loop.index0}}">
                         {% endif %}
                         <div class="carousel-crop"
-                            style="background-image: url({{ link }})">
+                            style="background-image: url('/wedding/{{ link }}')">
                         </div>
                     </div>
                     {% endfor %}
@@ -121,7 +120,7 @@
                 <p class="section-title fancy" style="margin-top: 1.5rem">Cặp đôi</p>
                 <div id="couple" class="couple-container">
                     <div class="couple-row">
-                        <img src="images/groom.png" class="couple-block"/>
+                        <img src="/wedding/images/groom.png" class="couple-block"/>
                         <div id="groom-info" class="couple-block">
                             <span class="fancy couple-name">Đỗ Ngọc Dũng</span>
                             <span class="parent-title">Con ông:&nbsp;</span>
@@ -138,7 +137,7 @@
                             <span class="parent-title">Con bà:&nbsp;</span>
                             <span class="parent-name">Vũ Thị Thúy</span>
                         </div>
-                        <img src="images/bride.png" class="couple-block"/>
+                        <img src="/wedding/images/bride.png" class="couple-block"/>
                     </div>
                 </div>
             </section>
@@ -148,14 +147,12 @@
                 <p id="album" class="section-title fancy">Ảnh cưới</p>
                 <div class="masonry" id="lightgallery">
                     {% for link in album_images %}
-                    <a class="masonry-item" href="{{link}}">
+                    <a class="masonry-item" href="/wedding/{{link}}">
                         <div class="overlay-hover">
                             <img
-                            src="{{ link }}" alt="Ảnh {{ loop.index0 }}" class="album-img"
-                            {% if loop.index0 >= 7 %}
-                            style="display: none"
-                            {% endif %}
-                            />
+                                src="/wedding/{{ link }}"
+                                alt="Ảnh {{ loop.index0 }}"
+                                class="album-img"/>
                         </div>
                     </a>
                     {% endfor %}
@@ -251,12 +248,12 @@
             <footer id="footer-container">
                 <div
                     id="footer-img"
-                    style="background-image: url('{{ footer_image }}');">
+                    style="background-image: url('/wedding/{{ footer_image }}');">
                 </div>
                 <div id="footer-overlay">
                 </div>
                 <div id="footer-heart">
-                    <img src="images/icons/heart-white.svg" width="100%"/>
+                    <img src="/wedding/images/icons/heart-white.svg" width="100%"/>
                 </div>
             </footer>
 
@@ -268,6 +265,11 @@
                         music_note
                     </span>
                 </div>
+            </div>
+
+            <!-- banking modal -->
+            <div class="modal fade" id="modal-mung-cuoi">
+                "HELLO"
             </div>
     </body>
 </html>

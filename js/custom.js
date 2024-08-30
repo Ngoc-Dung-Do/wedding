@@ -31,7 +31,7 @@ const initCarousel = () => {
 /* Setup music button */
 /* ================== */
 const initMusic = () => {
-    const audio = new Audio('/musics/em-ve-tinh-khoi.mp3');
+    const audio = new Audio(`/wedding/musics/em-ve-tinh-khoi.mp3`);
     const audioButton = document.querySelector('#music-button')
     const audioIcon = document.querySelector('#music-button-icon')
 
@@ -55,9 +55,9 @@ const initMusic = () => {
 // Falling sprites
 // ===============
 const initHeartEffect = () => {
-    const numHeartsPerGroup = 1; // Số lượng trái tim trong mỗi nhóm
-    const totalGroups = 100; // Tổng số nhóm bạn muốn tạo
-    const fallInterval = 200; // Khoảng thời gian giữa các nhóm trái tim (2 giây)
+    const numHeartsPerGroup = 5; // Số lượng trái tim trong mỗi nhóm
+    const totalGroups = 10; // Tổng số nhóm bạn muốn tạo
+    const fallInterval = 2000; // Khoảng thời gian giữa các nhóm trái tim (2 giây)
     const animationDuration = 15; // Thay đổi thời gian hoạt hình tại đây
     const choices = [
         'chem-1.png',
@@ -72,7 +72,7 @@ const initHeartEffect = () => {
         'math-4.png',
         'math-5.png',
         'math-6.png',
-    ]
+    ].map(img => `/wedding/images/icons/${img}`)
 
     const hearts = [
         "heart-1.svg",
@@ -80,7 +80,7 @@ const initHeartEffect = () => {
         "heart-3.png",
         "heart-4.png",
         "heart-5.svg",
-    ]
+    ].map(img => `/wedding/images/icons/${img}`)
 
     const randChoice = (lst) => {
         let n = lst.length;
@@ -95,13 +95,13 @@ const initHeartEffect = () => {
         for (let i = 0; i < numHeartsPerGroup; i++) {
             const heart = document.createElement('img');
             if (Math.random() < 0.6667) {
-                heart.src = `/images/icons/${randChoice(hearts)}`;
+                heart.src = randChoice(hearts);
             } else {
-                heart.src = `/images/icons/${randChoice(choices)}`;
+                heart.src = randChoice(choices);
             }
             heart.className = 'snowfall-flakes';
             heart.style.position = `fixed`; // Đặt kích thước ngẫu nhiên
-            heart.style.width = `${Math.random() * 40 + 20}px`; // Đặt kích thước ngẫu nhiên
+            heart.style.width = `${Math.random() * 10 + 20}px`; // Đặt kích thước ngẫu nhiên
             heart.style.left = `${Math.random() * 100}vw`; // Đặt vị trí ngẫu nhiên trên trục ngang
             heart.style.top = `-${Math.random() * viewportHeight}px`; // Bắt đầu từ vị trí trên cùng
 
@@ -159,19 +159,26 @@ const initTimer = () => {
 }
 
 // Gallery
+// =======
 const initGallery = () => {
+    // init Light Gallery
     let gallery = lightGallery(document.getElementById('lightgallery'), {
         plugins: [lgZoom, lgThumbnail, lgAutoplay],
-        speed: 500,
     });
     let btnViewGallery = document.getElementById("gallery-view-more")
     btnViewGallery.addEventListener("click", () => {
-        gallery.openGallery(8)
+        gallery.openGallery()
     })
 }
 
+// meta variables
+// ==============
+const getMetaVar = (name) => {
+    let elem = document.querySelector(`meta[name="${name}"]`)
+    return elem.content
+}
+
 document.addEventListener( 'DOMContentLoaded', () => {
-    // playMusic();
     initMusic();
     initHeartEffect();
     initTimer();
