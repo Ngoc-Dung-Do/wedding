@@ -2,6 +2,7 @@ import json
 import os
 import shutil
 from argparse import ArgumentParser
+from distutils.dir_util import copy_tree
 from os import path
 
 from jinja2 import Environment, FileSystemLoader
@@ -54,20 +55,21 @@ def install_dist(prefix="wedding"):
     ]
 
     # Clean everything
-    for root, dirs, files in os.walk(prefix):
-        for dir in dirs:
-            dirpath = os.path.join(root, dir)
-            shutil.rmtree(dirpath)
-        for file in files:
-            filepath = os.path.join(root, file)
-            os.remove(filepath)
+    # for root, dirs, files in os.walk(prefix):
+    #     for dir in dirs:
+    #         dirpath = os.path.join(root, dir)
+    #         print(dirpath)
+    #         shutil.rmtree(dirpath)
+    #     for file in files:
+    #         filepath = os.path.join(root, file)
+    #         os.remove(filepath)
 
     # Install every files
     for file in install_files:
         dest = f"{prefix}/{file}"
         print(f"{file} -> {dest}")
         if os.path.isdir(file):
-            shutil.copytree(file, dest)
+            copy_tree(file, dest)
         else:
             shutil.copy(file, dest)
 
