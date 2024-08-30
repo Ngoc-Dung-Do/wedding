@@ -13,7 +13,8 @@ body {
     font-family: "Alegreya", serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    background-color: color-mix(in srgb, var(--color-wedding-1), #000 10%);
+    background: hsla(352, 63%, 97%, 1);
+    /* background-color: color-mix(in srgb, var(--color-wedding-1), #000 10%); */
 }
 
 .fancy {
@@ -267,4 +268,20 @@ body {
         transform: translateY(300vh); 
         opacity: 0.5; /* Hoặc loại bỏ dòng này nếu không cần */
     }
+}
+
+/* Music button */
+#music-button {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: var(--color-wedding-2);
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
 }

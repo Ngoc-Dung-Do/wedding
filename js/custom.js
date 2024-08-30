@@ -28,10 +28,32 @@ const initCarousel = () => {
     carousel.cycle()
 }
 
-
+/* Setup music button */
 const playMusic = () => {
     var audio = new Audio('/musics/em-ve-tinh-khoi.mp3');
     audio.play();
+}
+
+const initMusic = () => {
+    const audio = new Audio('/musics/em-ve-tinh-khoi.mp3');
+    const audioButton = document.querySelector('#music-button')
+    const audioIcon = document.querySelector('#music-button-icon')
+
+    let playing = true
+    let update = () => {
+        if (playing) {
+            audio.pause();
+            audioIcon.innerText = "music_off"
+        }
+        else {
+            audio.play();
+            audioIcon.innerText = "music_note"
+        }
+        playing = !playing;
+    }
+    update()
+
+    audioButton.addEventListener("click", update);
 }
 
 const initHeartEffect = () => {
@@ -107,6 +129,7 @@ const initTimer = () => {
 
 document.addEventListener( 'DOMContentLoaded', () => {
     // playMusic();
+    initMusic();
     initHeartEffect()
     initTimer()
 });
