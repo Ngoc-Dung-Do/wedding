@@ -5,6 +5,7 @@ from argparse import ArgumentParser
 from distutils.dir_util import copy_tree
 from os import path
 
+import yaml
 from jinja2 import Environment, FileSystemLoader
 
 
@@ -23,6 +24,9 @@ def get_files(rootdir):
     return all_files
 
 
+# Load data
+with open("data.yaml") as f:
+    data = yaml.load(f, Loader=yaml.FullLoader)
 images = [
     # album images
     make_js("albumImages", get_files("images/album/")),
@@ -30,16 +34,14 @@ images = [
     make_js("carouselImages", get_files("images/carousel/")),
 ]
 
-# with open("js/database.js", "w", encoding="utf-8") as f:
-#     content = "\n".join(images)
-#     f.write(content)
-
+# Load jinja env
 env = Environment(loader=FileSystemLoader("."))
 template = env.get_template("template.html")
 rendered = template.render(
     album_images=get_files("images/album/"),
     carousel_images=get_files("images/carousel/"),
     footer_image="images/album/NTD01947.webp",
+    donations=data["donations"],
 )
 
 

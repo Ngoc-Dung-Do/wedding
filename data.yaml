@@ -1,0 +1,19 @@
+donations:
+  - title: mừng chú rể
+    qr: images/random-qr.png
+    bank: VCB
+    account: xxx xxx xxx xxx
+    owner: Đỗ Ngọc Dũng
+  - title: mừng cô dâu
+    qr: images/random-qr.png
+    bank: VCB
+    account: xxx xxx xxx xxx
+    owner: Trần Thị Minh Trang
+
+events:
+  - time: Thứ 4
+    location: |
+      Số nhà 75, Ngõ 272, Đường 416, Khu Tập thể HVPKKQ, Kim Sơn, Sơn Tây, Hà Nội
+  - time: Thứ 5
+    location: |
+      Thảo Nguyên Resort, Quốc Lộ 6, Mộc Châu, Sơn La 
