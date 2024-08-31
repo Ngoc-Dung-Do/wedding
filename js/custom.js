@@ -183,6 +183,7 @@ const getMetaVar = (name) => {
 const initModal = () => {
     const modal = document.querySelector(".donate-modal")
     const btnOpen = document.querySelector(".donate-open")
+    const fabOpen = document.querySelector("#fab-donate")
     const btnClose = document.querySelector(".donate-close")
 
     const openModal = () => {
@@ -193,6 +194,7 @@ const initModal = () => {
     }
 
     btnOpen.addEventListener("click", openModal)
+    fabOpen.addEventListener("click", openModal)
     btnClose.addEventListener("click", closeModal)
     console.log(modal)
 }
