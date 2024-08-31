@@ -42,6 +42,7 @@ rendered = template.render(
     carousel_images=get_files("images/carousel/"),
     footer_image="images/album/NTD01947.webp",
     donations=data["donations"],
+    events=data["events"],
 )
 
 
