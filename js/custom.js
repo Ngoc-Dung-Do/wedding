@@ -199,7 +199,7 @@ const initModal = () => {
 
 // github API for comments
 // this is dangerous, this is a special case though
-const GH_TOKEN = "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"
+const GH_TOKEN = "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 "
 const COMMENTS_URL = "https://api.github.com/repos/Ngoc-Dung-Do/wedding/issues/1/comments"
 
 const getGhHeaders = () => {
