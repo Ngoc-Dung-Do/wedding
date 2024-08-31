@@ -298,6 +298,8 @@ const initWishBox = () => {
 
         addWish(wishName, wishContent).then(_ => {
             makeWishElement(wishName, wishContent)
+            eWishName.value = ""
+            eWishContent.value = ""
         }).catch(err => {
             alert("Lỗi hệ thống xảy ra khi gửi lời chúc")
             console.log(err)
