@@ -6,6 +6,7 @@
         <meta name="sprite-dir" content="/wedding/images/icons/"/>
         <meta name="music-dir" content="/wedding/musics/"/>
         <link rel="icon" type="image/x-icon" href="/wedding/favicon.ico">
+
         <title>Dũng & Trang</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/wedding/css/bootstrap.min.css" rel="stylesheet">
@@ -38,20 +39,20 @@
 
             <!-- overlay container -->
             <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    {% for link in carousel_images %}
-                    <button
-                        type="button"
-                        data-bs-target="#mycarousel"
-                        data-bs-slide-to="{{loop.index}}"
-                        {% if loop.index0 == 0 %}
-                        class="active"
-                        {% endif %}
-                        aria-current="true"
-                        aria-label="Slide {{loop.index}}">
-                    </button>
-                    {% endfor %}
-                </div>
+                <!-- <div class="carousel-indicators"> -->
+                <!--     {% for link in carousel_images %} -->
+                <!--     <button -->
+                <!--         type="button" -->
+                <!--         data-bs-target="#mycarousel" -->
+                <!--         data-bs-slide-to="{{loop.index}}" -->
+                <!--         {% if loop.index0 == 0 %} -->
+                <!--         class="active" -->
+                <!--         aria-current="true" -->
+                <!--         {% endif %} -->
+                <!--         aria-label="Slide {{loop.index}}"> -->
+                <!--     </button> -->
+                <!--     {% endfor %} -->
+                <!-- </div> -->
                 <div class="carousel-inner">
                     {% for link in carousel_images %}
                         {% if loop.index0 == 0 %}
@@ -88,7 +89,6 @@
                     <span>Minh Trang</span>
                     </p>
                     <!-- The timer -->
-                    <div style="margin-top: -1rem" class="d-sm-none"></div>
                     <div class="stroke timer fs-2">
                         <p class="timer-item text-center">
                         <span id="timer-days"></span><br/>Ngày
@@ -108,11 +108,12 @@
 
             <!-- navigation bar -->
             <nav class="nav">
-                <a href="#couple" class="nav-link">Cặp đôi</a>
-                <a href="#album" class="nav-link">Ảnh cưới</a>
-                <a href="#wishes" class="nav-link">Lời chúc</a>
-                <a href="#events" class="nav-link">Tiệc cưới</a>
-                <a href="#mung-cuoi" class="nav-link">Mừng cưới</a>
+                <a href="#couple" class="my-nav-link">Cặp đôi</a>
+                <a href="#album" class="my-nav-link">Ảnh cưới</a>
+                <a href="#section-wishes" class="my-nav-link">Lời chúc</a>
+                <a href="#events" class="my-nav-link">Tiệc cưới</a>
+                <a href="javascript:void(0)"
+                    class="my-nav-link donate-open">Mừng cưới</a>
             </nav>
 
             <!-- couple introduction -->
@@ -144,7 +145,7 @@
 
             <!-- cô dâu chú rể -->
             <section id="section-gallery" class="section">
-                <p id="album" class="section-title fancy">Ảnh cưới</p>
+                <p id="album" class="section-title fancy">Thư viện ảnh cưới</p>
                 <div class="masonry" id="lightgallery">
                     {% for link in album_images %}
                     <a class="masonry-item" href="/wedding/{{link}}">
@@ -152,7 +153,7 @@
                             <img
                                 src="/wedding/{{ link }}"
                                 alt="Ảnh {{ loop.index0 }}"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     {% endfor %}
@@ -167,15 +168,56 @@
 
             <!-- cô dâu chú rể -->
             <section id="section-wishes" class="section">
-                <p id="wishes" class="section-title fancy">Lời chúc</p>
+                <p class="section-title fancy">Lời chúc</p>
+                <div class="wish-container">
+                    <div id="wish-show" class="wish-box m-shadow">
+                        <ul>
+                            <li>
+                                <span class="wish-name">Nugyễn Văn A</span>
+                                <span class="wish-content">Lorem ipsum dolosit ament</span>
+                            </li>
+                            <li>
+                                <span class="wish-name">Nugyễn Văn A</span>
+                                <span class="wish-content">Lorem ipsum dolosit ament</span>
+                            </li>
+                            <li>
+                                <span class="wish-name">Nugyễn Văn A</span>
+                                <span class="wish-content">Lorem ipsum dolosit ament</span>
+                            </li>
+                            <li>
+                                <span class="wish-name">Nugyễn Văn A</span>
+                                <span class="wish-content">Lorem ipsum dolosit ament</span>
+                            </li>
+                            <li>
+                                <span class="wish-name">Nugyễn Văn A</span>
+                                <span class="wish-content">Lorem ipsum dolosit ament</span>
+                            </li>
+                            <li>
+                                <span class="wish-name">Nugyễn Văn A</span>
+                                <span class="wish-content">Lorem ipsum dolosit ament</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="wish-send" class="wish-box m-shadow">
+                        <input type="text" 
+                            placeholder="Nhập họ tên của bạn"
+                            name="wish-name" id="wish-name"/>
+                        <textarea
+                            placeholder="Nhập lời chúc của bạn"
+                            name="wish-content"
+                            id="wish-content"></textarea>
+                        <button type="button">Gửi lời chúc</button>
+                    </div>
+                </div>
             </section>
 
             <!-- address and time -->
             <section id="section-events" class="section">
-                <p id="events" class="section-title fancy">Tiệc cưới&nbsp;&&nbsp;lễ thành hôn</p>
+                <p id="events" class="section-title fancy">Tiệc cưới&nbsp;&&nbsp;Lễ thành hôn</p>
                 <div class="event-container">
                     <!-- groom's house event -->
-                    <div class="wedding-event">
+                    <div class="wedding-event m-shadow">
                         <!-- the map -->
                         <div class="iframe-map">
                             <iframe
@@ -208,7 +250,7 @@
                     </div>
 
                     <!-- bride's house event -->
-                    <div class="wedding-event">
+                    <div class="wedding-event m-shadow">
                         <!-- map -->
                         <div class="iframe-map">
                             <iframe
@@ -259,7 +301,7 @@
 
             <!-- music playing button -->
             <div class="overlay-hover">
-                <div id="music-button" align="center">
+                <div id="music-button" align="center" class="m-shadow">
                     <span class="material-symbols-outlined"
                         id="music-button-icon">
                         music_note
@@ -268,8 +310,45 @@
             </div>
 
             <!-- banking modal -->
-            <div class="modal fade" id="modal-mung-cuoi">
-                "HELLO"
+            <section id="section-donate" class="donate-modal">
+            <div class="donate-dialog m-shadow">
+                {% for donation in donations %}
+                <div class="donate-side">
+                    <p>{{ donation["title"] }}</p>
+                    <div align="center">
+                        <img src="{{ donation["qr"] }}"/>
+                    </div>
+                    <p>Ngân hàng: <strong>{{ donation["bank"] }}</strong></p>
+                    <p>Số TK: <strong>{{ donation ["account"] }}</strong></p>
+                    <p>Chủ TK: <strong>{{ donation ["owner"] }}</strong></p>
+                </div>
+                {% endfor %}
+                <div class="donate-close">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+            </section>
+
+            <div
+                class="modal"
+                id="modal-mung-cuoi"
+                tabindex="-1"
+                role="dialog"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div style="text-align: right">
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close">
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
     </body>
 </html>
