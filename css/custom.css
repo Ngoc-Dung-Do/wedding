@@ -323,7 +323,7 @@ body {
 }
 
 /* Limit the number of displayed elements */
-.masonry .masonry-item:nth-child(n + 8) {
+.masonry .masonry-item:nth-child(n + 9) {
     display: none;
 }
 
