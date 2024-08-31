@@ -3,6 +3,7 @@
     --color-wedding-2: #BEC6A0;
     --color-wedding-3: #708871;
     --color-wedding-4: #606676;
+    --color-bold-secondary: rgba(0, 0, 0, 0.7);
 
     --font-size-large: 24pt;
     margin: 0;
@@ -142,22 +143,36 @@ body {
 .nav {
     width: 100%;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-around;
     background-color: #212321;
+    column-count: 5;
 }
 
 .my-nav-link {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
-    display: block;
-    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-transform: uppercase;
     font-weight: 600;
+    height: var(--nav-height);
+    width: 20%;
 }
 
+.my-nav-link:active,
+.my-nav-link:focus,
 .my-nav-link:hover {
-    color: rgba(255, 255, 255, 1);
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media only screen and (max-width: 1000px) {
+    .nav { column-count: 2; }
+    .my-nav-link:nth-child(-n + 1) { width: 34%; }
+    .my-nav-link:nth-child(-n + 3) { width: 33%; }
+    .my-nav-link:nth-last-child(-n + 2) { width: 50%; }
 }
 
 /* Bride and groom */
@@ -172,7 +187,7 @@ body {
 }
 
 .parent-name, .parent-title {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--color-bold-secondary);
 }
 
 .parent-name {
@@ -265,17 +280,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 70px;
-    padding-bottom: 50px;
-}
-
-@media only screen and (max-width: 768px) {
-    .section { padding-bottom: 42px; }
+    padding-bottom: 2rem;
 }
 
 .section-title {
     text-align: center;
+    height: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-size: auto 100% ;
     background-repeat: no-repeat;
     background-position: center center;
@@ -405,19 +421,15 @@ body {
     max-width: 80vw;
     margin: auto; /* Căn giữa Masonry Layout */
     gap: 2rem;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: center;
-    margin-bottom: 1rem;
 }
 
 .wedding-event {
     width: 300px;
-    aspectratio: 1 / 1.618;
     background: white;
     break-inside: avoid;
     border-radius: var(--border-radius);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -439,12 +451,12 @@ body {
     }
 }
 
-
 .event-info {
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
     padding-bottom: 1rem;
+    flex: 1;
 }
 
 .event-info header {
@@ -452,7 +464,7 @@ body {
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 800;
-    color: rgba(0, 0, 0, 0.7);
+    color: var(--color-bold-secondary);
 }
 
 .iframe-map {
@@ -603,6 +615,8 @@ body {
     overflow-y: auto;
     list-style-type: none;
     border: 2px solid #ddedea;
+    min-height: 250px;
+    min-width: 300px;
 }
 
 #wish-show ul li {
@@ -612,6 +626,15 @@ body {
 #wish-show ul li:nth-child(even) {
     background-color: #ddedeaaa;
 }
+
+#wish-show ul li span:first-child,
+#wish-show ul li span:first-child::after {
+    font-weight: bold;
+    color: var(--color-bold-secondary);
+    content: ": ";
+    text-transform: uppercase;
+}
+
 
 #wish-send {
     display: flex;

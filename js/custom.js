@@ -199,8 +199,8 @@ const initModal = () => {
 
 // github API for comments
 // this is dangerous, this is a special case though
-const GH_TOKEN = "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"
-const COMMENTS_URL = "https://api.github.com/repos/ndgnuh/ndgnuh.github.io/issues/1/comments"
+const GH_TOKEN = "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"
+const COMMENTS_URL = "https://api.github.com/repos/Ngoc-Dung-Do/wedding/issues/1/comments"
 
 const getGhHeaders = () => {
     const headers = {}
@@ -239,7 +239,8 @@ const getWishes = async () => {
                 return {
                     comment: parsed.comment,
                     name: parsed.name,
-                    blacklist: comment["reactions"]["-1"] > 0,
+                    blacklist: (comment["reactions"]["-1"] > 0) 
+                        || (comment["user"]["login"] != "Ngoc-Dung-Do"),
                 }
             } catch (err) {
                 return false
@@ -252,13 +253,64 @@ const getWishes = async () => {
     }
 }
 
+const initWishBox = () => {
+    const eWishBox = document.getElementById("wish-box")
+    const eWishName = document.querySelector("input[name='wish-name']")
+    const eWishContent = document.querySelector("textarea[name='wish-content']")
+    const eWishSubmit = document.querySelector("button[name='wish-submit']")
+
+    const makeWishElement = (name, content) => {
+        let ewish = document.createElement("li")
+        let ename = document.createElement("span")
+        let econtent = document.createElement("span")
+        ename.innerText = name
+        econtent.innerText = content
+        ewish.appendChild(ename)
+        ewish.appendChild(econtent)
+        eWishBox.prepend(ewish)
+    }
+
+    /* On first load, get all wishes */
+    getWishes().then(wishes => {
+        eWishBox.innerHTML = ""
+        wishes.filter(wish => !wish.blacklist)
+            .map(wish => makeWishElement(wish.name, wish.comment))
+    }).catch(err => {
+        eWishBox.innerHTML = (
+            `<p>Có lỗi xảy ra khi tải lời chúc:</p>${err.toString()}`
+        )
+    })
+
+    /* On submit, just append the wish */
+    eWishSubmit.addEventListener("click", () => {
+        const wishName = eWishName.value.trim()
+        const wishContent = eWishContent.value.trim()
+
+        if (wishName.length == 0) {
+            alert("Vui lòng nhập tên");
+            return;
+        }
+
+        if (wishContent.length == 0) {
+            alert("Vui lòng nhập lời chúc");
+            return;
+        }
+
+        addWish(wishName, wishContent).then(_ => {
+            makeWishElement(wishName, wishContent)
+        }).catch(err => {
+            alert("Lỗi hệ thống xảy ra khi gửi lời chúc")
+            console.log(err)
+        })
+    })
+}
+
 document.addEventListener( 'DOMContentLoaded', () => {
+    initWishBox()
     initMusic();
     initHeartEffect();
     initTimer();
     initGallery();
     initModal();
-
-    getWishes().then(console.log)
 });
 

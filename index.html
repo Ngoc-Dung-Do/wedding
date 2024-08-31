@@ -156,7 +156,7 @@
             <nav class="nav">
                 <a href="#couple" class="my-nav-link">Cặp đôi</a>
                 <a href="#album" class="my-nav-link">Ảnh cưới</a>
-                <a href="#section-wishes" class="my-nav-link">Lời chúc</a>
+                <a href="#section-wishes" class="my-nav-link">Chúc phúc</a>
                 <a href="#events" class="my-nav-link">Tiệc cưới</a>
                 <a href="javascript:void(0)"
                     class="my-nav-link donate-open">Mừng cưới</a>
@@ -164,7 +164,7 @@
 
             <!-- couple introduction -->
             <section class="section" id="section-couple">
-                <p class="section-title fancy" style="margin-top: 1.5rem">Cặp đôi</p>
+                <p class="section-title fancy">Cặp đôi</p>
                 <div id="couple" class="couple-container">
                     <div class="couple-row">
                         <img src="/wedding/images/groom.png" class="couple-block"/>
@@ -421,35 +421,10 @@
 
             <!-- cô dâu chú rể -->
             <section id="section-wishes" class="section">
-                <p class="section-title fancy">Lời chúc</p>
+                <p class="section-title fancy">Chúc phúc</p>
                 <div class="wish-container">
                     <div id="wish-show" class="wish-box m-shadow">
-                        <ul>
-                            <li>
-                                <span class="wish-name">Nugyễn Văn A</span>
-                                <span class="wish-content">Lorem ipsum dolosit ament</span>
-                            </li>
-                            <li>
-                                <span class="wish-name">Nugyễn Văn A</span>
-                                <span class="wish-content">Lorem ipsum dolosit ament</span>
-                            </li>
-                            <li>
-                                <span class="wish-name">Nugyễn Văn A</span>
-                                <span class="wish-content">Lorem ipsum dolosit ament</span>
-                            </li>
-                            <li>
-                                <span class="wish-name">Nugyễn Văn A</span>
-                                <span class="wish-content">Lorem ipsum dolosit ament</span>
-                            </li>
-                            <li>
-                                <span class="wish-name">Nugyễn Văn A</span>
-                                <span class="wish-content">Lorem ipsum dolosit ament</span>
-                            </li>
-                            <li>
-                                <span class="wish-name">Nugyễn Văn A</span>
-                                <span class="wish-content">Lorem ipsum dolosit ament</span>
-                            </li>
-                        </ul>
+                        <ul id="wish-box"></ul>
                     </div>
 
                     <div id="wish-send" class="wish-box m-shadow">
@@ -460,7 +435,9 @@
                             placeholder="Nhập lời chúc của bạn"
                             name="wish-content"
                             id="wish-content"></textarea>
-                        <button type="button">Gửi lời chúc</button>
+                        <button type="button" name="wish-submit">
+                            Gửi lời chúc
+                        </button>
                     </div>
                 </div>
             </section>
