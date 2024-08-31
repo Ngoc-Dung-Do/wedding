@@ -10,6 +10,7 @@
     font-size: 16pt;
     --border-radius: 0.3rem;
     --nav-height: 50px;
+    --fab-pos: calc(var(--nav-height) / 2);
 
     --ff-normal: "Alegraya", serif;
     --ff-fancy: "Greate Vibes", cursive;
@@ -431,21 +432,38 @@ body {
     }
 }
 
-/* Music button */
-#music-button {
+/* Floating action button */
+.fab-container {
     position: fixed;
     width: 40px;
-    height: 40px;
+    height: auto;
+    bottom: var(--fab-pos);
+    right: var(--fab-pos);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-end;
+    z-index: 10;
+    gap: calc(var(--fab-pos) / 2);
+}
+
+.fab-container a,
+.fab-container div {
     cursor: pointer;
-    bottom: 25px;
-    right: 25px;
+    width: 100%;
+    aspect-ratio: 1;
+    text-decoration: none;
+}
+
+.fab-button {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background: var(--color-wedding-2);
-    z-index: 10;
+    background-color: #df4758;
+    color: white; 
 }
+
 
 /* Wedding event */
 .event-container {
@@ -561,17 +579,19 @@ body {
     background: white;
     z-index: 10;
     border-radius: var(--border-radius);
-    padding: 1rem;
-    gap: 1rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
 
+.donate-dialog-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    overflow-y: auto;
 }
 
 .donate-side {
-    flex: 1 1 0px;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -617,12 +637,16 @@ body {
 
 @media only screen and (max-width: 768px) {
     .donate-dialog {
-        flex-direction: column;
-        overflow-y: auto;
         aspect-ratio: none;
         width: calc(100vw - 1rem);
         height: calc(100vh - 1rem);
-        justify-content: center;
+    }
+
+    .donate-dialog-content {
+        height: 100%;
+        flex-direction: column;
+        overflow-y: auto;
+        justify-content: flex-start;
     }
 }
 

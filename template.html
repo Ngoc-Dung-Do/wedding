@@ -189,9 +189,6 @@
                         <button type="button" name="wish-submit">
                             Gửi lời chúc
                         </button>
-                        <button type="button" name="wish-submit">
-                            Mừng cưới
-                        </button>
                     </div>
                 </div>
             </section>
@@ -250,36 +247,54 @@
                 </div>
             </footer>
 
-            <!-- music playing button -->
-            <div class="overlay-hover">
-                <div id="music-button" align="center" class="m-shadow">
+
+            <!-- floating action action buttons -->
+            <div class="fab-container">
+                <!-- wishes button -->
+                <a href="#section-wishes" class="fab-button m-shadow" id="fab-wish">
+                    <span class="material-symbols-outlined">
+                        outgoing_mail
+                    </span>
+                </a>
+
+                <!-- donation button -->
+                <a href="javascript:void(0)" class="fab-button m-shadow" id="fab-donate">
+                    <span class="material-symbols-outlined">
+                        credit_card_heart
+                    </span>
+                </a>
+
+                <!-- music playing button -->
+                <a class="fab-button m-shadow" id="music-button">
                     <span class="material-symbols-outlined"
                         id="music-button-icon">
                         music_note
                     </span>
-                </div>
+                </a>
             </div>
 
             <!-- banking modal -->
             <section id="section-donate" class="donate-modal">
-            <div class="donate-dialog m-shadow">
-                {% for donation in donations %}
-                <div class="donate-side">
-                    <p>{{ donation["title"] }}</p>
-                    <div align="center">
-                        <img src="{{ donation["qr"] }}"/>
+                <div class="donate-dialog m-shadow">
+                    <div class="donate-close">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
                     </div>
-                    <p>Ngân hàng: <strong>{{ donation["bank"] }}</strong></p>
-                    <p>Số TK: <strong>{{ donation ["account"] }}</strong></p>
-                    <p>Chủ TK: <strong>{{ donation ["owner"] }}</strong></p>
+                    <div class="donate-dialog-content">
+                        {% for donation in donations %}
+                        <div class="donate-side">
+                            <p>{{ donation["title"] }}</p>
+                            <div align="center">
+                                <img src="{{ donation["qr"] }}"/>
+                            </div>
+                            <p>Ngân hàng: <strong>{{ donation["bank"] }}</strong></p>
+                            <p>Số TK: <strong>{{ donation ["account"] }}</strong></p>
+                            <p>Chủ TK: <strong>{{ donation ["owner"] }}</strong></p>
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
-                {% endfor %}
-                <div class="donate-close">
-                    <span class="material-symbols-outlined">
-                        close
-                    </span>
-                </div>
-            </div>
             </section>
 
             <div
