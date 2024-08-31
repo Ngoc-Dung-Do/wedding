@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000mm"
+   height="1000mm"
+   viewBox="0 0 1000 1000"
+   version="1.1"
+   id="svg1717"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="diamond-bg.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1719"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="false"
+     inkscape:zoom="0.18130939"
+     inkscape:cx="1354.0391"
+     inkscape:cy="1905.5825"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="6"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="685.86722,1081.7203"
+       orientation="0,-1"
+       id="guide2216"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1714" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-22.475613,-45.915428)">
+    <rect
+       style="opacity:0.25;fill:#000000;fill-opacity:0.317618;stroke-width:1.5521;paint-order:stroke fill markers"
+       id="rect2234"
+       width="212.13203"
+       height="212.13203"
+       x="-89.491539"
+       y="-1215.0859"
+       transform="rotate(135)" />
+    <rect
+       style="opacity:0;fill:#ec1515;fill-opacity:0.317618;stroke-width:3.65833;paint-order:stroke fill markers"
+       id="rect2212"
+       width="500"
+       height="500"
+       x="522.47559"
+       y="545.91541" />
+    <rect
+       style="opacity:0;fill:#ec1515;fill-opacity:0.317618;stroke-width:3.65833;paint-order:stroke fill markers"
+       id="rect2210"
+       width="500"
+       height="500"
+       x="22.475613"
+       y="45.915428"
+       transform="translate(1.0079753e-7)" />
+    <rect
+       style="opacity:0.25;fill:#000000;fill-opacity:0.317618;stroke-width:1.5521;paint-order:stroke fill markers"
+       id="rect2297"
+       width="212.13203"
+       height="212.13203"
+       x="-89.49157"
+       y="-507.97919"
+       transform="rotate(135)" />
+  </g>
+</svg>
