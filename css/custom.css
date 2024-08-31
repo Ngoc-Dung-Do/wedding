@@ -142,22 +142,36 @@ body {
 .nav {
     width: 100%;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-around;
     background-color: #212321;
+    column-count: 5;
 }
 
 .my-nav-link {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
-    display: block;
-    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-transform: uppercase;
     font-weight: 600;
+    height: var(--nav-height);
+    width: 20%;
 }
 
+.my-nav-link:active,
+.my-nav-link:focus,
 .my-nav-link:hover {
-    color: rgba(255, 255, 255, 1);
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media only screen and (max-width: 1000px) {
+    .nav { column-count: 2; }
+    .my-nav-link:nth-child(-n + 1) { width: 34%; }
+    .my-nav-link:nth-child(-n + 3) { width: 33%; }
+    .my-nav-link:nth-last-child(-n + 2) { width: 50%; }
 }
 
 /* Bride and groom */
@@ -265,17 +279,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 70px;
-    padding-bottom: 50px;
-}
-
-@media only screen and (max-width: 768px) {
-    .section { padding-bottom: 42px; }
+    padding-bottom: 2rem;
 }
 
 .section-title {
     text-align: center;
+    height: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-size: auto 100% ;
     background-repeat: no-repeat;
     background-position: center center;
@@ -407,17 +422,14 @@ body {
     gap: 2rem;
     align-items: flex-start;
     justify-content: center;
-    margin-bottom: 1rem;
 }
 
 .wedding-event {
     width: 300px;
-    aspectratio: 1 / 1.618;
+    aspect-ratio: 1 / 1.618;
     background: white;
     break-inside: avoid;
     border-radius: var(--border-radius);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
