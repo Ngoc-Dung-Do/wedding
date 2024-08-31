@@ -3,6 +3,7 @@
     --color-wedding-2: #BEC6A0;
     --color-wedding-3: #708871;
     --color-wedding-4: #606676;
+    --color-bold-secondary: rgba(0, 0, 0, 0.7);
 
     --font-size-large: 24pt;
     margin: 0;
@@ -186,7 +187,7 @@ body {
 }
 
 .parent-name, .parent-title {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--color-bold-secondary);
 }
 
 .parent-name {
@@ -205,8 +206,8 @@ body {
     background-repeat: no-repeat;
     background-position: center 90%;
 }
-#groom-info { background-image: url("/images/flower-bg-left.png"); }
-#bride-info { background-image: url("/images/flower-bg-right.png"); }
+#groom-info { background-image: url("/wedding/images/flower-bg-left.png"); }
+#bride-info { background-image: url("/wedding/images/flower-bg-right.png"); }
 
 @media only screen and (max-width: 512px) {
     #bride-info, #groom-info  {
@@ -294,7 +295,7 @@ body {
     background-size: auto 100% ;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url('/images/floral-heading-10.png');
+    background-image: url('/wedding/images/floral-heading-10.png');
 }
 
 /* Alice
@@ -420,13 +421,12 @@ body {
     max-width: 80vw;
     margin: auto; /* Căn giữa Masonry Layout */
     gap: 2rem;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: center;
 }
 
 .wedding-event {
     width: 300px;
-    aspect-ratio: 1 / 1.618;
     background: white;
     break-inside: avoid;
     border-radius: var(--border-radius);
@@ -451,12 +451,12 @@ body {
     }
 }
 
-
 .event-info {
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
     padding-bottom: 1rem;
+    flex: 1;
 }
 
 .event-info header {
@@ -464,7 +464,7 @@ body {
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 800;
-    color: rgba(0, 0, 0, 0.7);
+    color: var(--color-bold-secondary);
 }
 
 .iframe-map {
@@ -615,6 +615,8 @@ body {
     overflow-y: auto;
     list-style-type: none;
     border: 2px solid #ddedea;
+    min-height: 250px;
+    min-width: 300px;
 }
 
 #wish-show ul li {
@@ -624,6 +626,15 @@ body {
 #wish-show ul li:nth-child(even) {
     background-color: #ddedeaaa;
 }
+
+#wish-show ul li span:first-child,
+#wish-show ul li span:first-child::after {
+    font-weight: bold;
+    color: var(--color-bold-secondary);
+    content: ": ";
+    text-transform: uppercase;
+}
+
 
 #wish-send {
     display: flex;

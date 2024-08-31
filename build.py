@@ -25,7 +25,7 @@ def get_files(rootdir):
 
 
 # Load data
-with open("data.yaml") as f:
+with open("data.yaml", encoding="utf-8") as f:
     data = yaml.load(f, Loader=yaml.FullLoader)
 images = [
     # album images
