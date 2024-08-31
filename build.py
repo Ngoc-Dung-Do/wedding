@@ -40,7 +40,7 @@ template = env.get_template("template.html")
 rendered = template.render(
     album_images=get_files("images/album/"),
     carousel_images=get_files("images/carousel/"),
-    footer_image="images/album/NTD01947.webp",
+    footer_image=data["footer-image"],
     donations=data["donations"],
     events=data["events"],
 )
