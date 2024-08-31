@@ -327,7 +327,7 @@ body {
 }
 
 #section-events .section-bg-image {
-    background: url('/images/heart-bg.svg');
+    background: url('/wedding/images/heart-bg.svg');
     background-position: center center;
     background-size: 2rem auto;
     background-repeat: repeat;
@@ -335,7 +335,7 @@ body {
 }
 
 #section-gallery .section-bg-image {
-    background: url('/images/diamond-bg.svg');
+    background: url('/wedding/images/diamond-bg.svg');
     background-position: center center;
     background-size: 0.5rem auto;
     background-repeat: repeat;
