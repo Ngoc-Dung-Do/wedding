@@ -206,8 +206,8 @@ body {
     background-repeat: no-repeat;
     background-position: center 90%;
 }
-#groom-info { background-image: url("/images/flower-bg-left.png"); }
-#bride-info { background-image: url("/images/flower-bg-right.png"); }
+#groom-info { background-image: url("/wedding/images/flower-bg-left.png"); }
+#bride-info { background-image: url("/wedding/images/flower-bg-right.png"); }
 
 @media only screen and (max-width: 512px) {
     #bride-info, #groom-info  {
@@ -295,7 +295,7 @@ body {
     background-size: auto 100% ;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url('/images/floral-heading-10.png');
+    background-image: url('/wedding/images/floral-heading-10.png');
 }
 
 /* Alice
