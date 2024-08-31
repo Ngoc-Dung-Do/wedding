@@ -456,12 +456,29 @@ body {
 }
 
 .fab-button {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     background-color: #df4758;
     color: white; 
+}
+
+.fab-button .fab-tooltip {
+    position: absolute;
+    left: calc(-7rem - 12.5px);
+    padding: 0rem 0.5rem;
+    top: 50%;
+    transform: translateY(-50%); 
+    background-color: inherit;
+    width: 7rem;
+    transition: all 1s cubic-bezier(.25,.8,.25,1);
+    display: none;
+}
+
+.fab-button:hover .fab-tooltip {
+    display: initial;
 }
 
 
