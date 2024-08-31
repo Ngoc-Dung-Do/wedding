@@ -147,6 +147,7 @@
 
             <!-- cô dâu chú rể -->
             <section id="section-gallery" class="section">
+                <div class="section-bg-image"></div>
                 <p id="album" class="section-title fancy">Thư viện ảnh cưới</p>
                 <div class="masonry" id="lightgallery">
                     {% for link in album_images %}
@@ -170,6 +171,7 @@
 
             <!-- cô dâu chú rể -->
             <section id="section-wishes" class="section">
+                <div class="section-bg-image"></div>
                 <p class="section-title fancy">Chúc phúc</p>
                 <div class="wish-container">
                     <div id="wish-show" class="wish-box m-shadow">
@@ -186,6 +188,9 @@
                             id="wish-content"></textarea>
                         <button type="button" name="wish-submit">
                             Gửi lời chúc
+                        </button>
+                        <button type="button" name="wish-submit">
+                            Mừng cưới
                         </button>
                     </div>
                 </div>
@@ -229,6 +234,7 @@
                     </div>
                     {% endfor %}
                 </div>
+                <div class="section-bg-image"></div>
             </section>
 
             <!-- footer image -->
