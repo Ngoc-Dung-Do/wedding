@@ -39,47 +39,44 @@
 
             <!-- overlay container -->
             <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    
-                    <button
-                        type="button"
-                        data-bs-target="#mycarousel"
-                        data-bs-slide-to="1"
-                        
-                        class="active"
-                        
-                        aria-current="true"
-                        aria-label="Slide 1">
-                    </button>
-                    
-                    <button
-                        type="button"
-                        data-bs-target="#mycarousel"
-                        data-bs-slide-to="2"
-                        
-                        aria-current="true"
-                        aria-label="Slide 2">
-                    </button>
-                    
-                    <button
-                        type="button"
-                        data-bs-target="#mycarousel"
-                        data-bs-slide-to="3"
-                        
-                        aria-current="true"
-                        aria-label="Slide 3">
-                    </button>
-                    
-                    <button
-                        type="button"
-                        data-bs-target="#mycarousel"
-                        data-bs-slide-to="4"
-                        
-                        aria-current="true"
-                        aria-label="Slide 4">
-                    </button>
-                    
-                </div>
+                <!-- <div class="carousel-indicators"> -->
+                <!--      -->
+                <!--     <button -->
+                <!--         type="button" -->
+                <!--         data-bs-target="#mycarousel" -->
+                <!--         data-bs-slide-to="1" -->
+                <!--          -->
+                <!--         class="active" -->
+                <!--         aria-current="true" -->
+                <!--          -->
+                <!--         aria-label="Slide 1"> -->
+                <!--     </button> -->
+                <!--      -->
+                <!--     <button -->
+                <!--         type="button" -->
+                <!--         data-bs-target="#mycarousel" -->
+                <!--         data-bs-slide-to="2" -->
+                <!--          -->
+                <!--         aria-label="Slide 2"> -->
+                <!--     </button> -->
+                <!--      -->
+                <!--     <button -->
+                <!--         type="button" -->
+                <!--         data-bs-target="#mycarousel" -->
+                <!--         data-bs-slide-to="3" -->
+                <!--          -->
+                <!--         aria-label="Slide 3"> -->
+                <!--     </button> -->
+                <!--      -->
+                <!--     <button -->
+                <!--         type="button" -->
+                <!--         data-bs-target="#mycarousel" -->
+                <!--         data-bs-slide-to="4" -->
+                <!--          -->
+                <!--         aria-label="Slide 4"> -->
+                <!--     </button> -->
+                <!--      -->
+                <!-- </div> -->
                 <div class="carousel-inner">
                     
                         
@@ -138,7 +135,6 @@
                     <span>Minh Trang</span>
                     </p>
                     <!-- The timer -->
-                    <div style="margin-top: -1rem" class="d-sm-none"></div>
                     <div class="stroke timer fs-2">
                         <p class="timer-item text-center">
                         <span id="timer-days"></span><br/>Ngày
@@ -158,11 +154,12 @@
 
             <!-- navigation bar -->
             <nav class="nav">
-                <a href="#couple" class="nav-link">Cặp đôi</a>
-                <a href="#album" class="nav-link">Ảnh cưới</a>
-                <a href="#wishes" class="nav-link">Lời chúc</a>
-                <a href="#events" class="nav-link">Tiệc cưới</a>
-                <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-mung-cuoi" class="nav-link">Mừng cưới</a>
+                <a href="#couple" class="my-nav-link">Cặp đôi</a>
+                <a href="#album" class="my-nav-link">Ảnh cưới</a>
+                <a href="#section-wishes" class="my-nav-link">Lời chúc</a>
+                <a href="#events" class="my-nav-link">Tiệc cưới</a>
+                <a href="javascript:void(0)"
+                    class="my-nav-link donate-open">Mừng cưới</a>
             </nav>
 
             <!-- couple introduction -->
@@ -194,7 +191,7 @@
 
             <!-- cô dâu chú rể -->
             <section id="section-gallery" class="section">
-                <p id="album" class="section-title fancy">Ảnh cưới</p>
+                <p id="album" class="section-title fancy">Thư viện ảnh cưới</p>
                 <div class="masonry" id="lightgallery">
                     
                     <a class="masonry-item" href="/wedding/images/album/NTD01647.webp">
@@ -202,7 +199,7 @@
                             <img
                                 src="/wedding/images/album/NTD01647.webp"
                                 alt="Ảnh 0"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -211,7 +208,7 @@
                             <img
                                 src="/wedding/images/album/NTD03133.webp"
                                 alt="Ảnh 1"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -220,7 +217,7 @@
                             <img
                                 src="/wedding/images/album/NTD02411.webp"
                                 alt="Ảnh 2"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -229,7 +226,7 @@
                             <img
                                 src="/wedding/images/album/NTD02300.webp"
                                 alt="Ảnh 3"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -238,7 +235,7 @@
                             <img
                                 src="/wedding/images/album/NTD01855.webp"
                                 alt="Ảnh 4"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -247,7 +244,7 @@
                             <img
                                 src="/wedding/images/album/NTD03157.webp"
                                 alt="Ảnh 5"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -256,7 +253,7 @@
                             <img
                                 src="/wedding/images/album/NTD01663.webp"
                                 alt="Ảnh 6"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -265,7 +262,7 @@
                             <img
                                 src="/wedding/images/album/NTD01947.webp"
                                 alt="Ảnh 7"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -274,7 +271,7 @@
                             <img
                                 src="/wedding/images/album/NTD02786.webp"
                                 alt="Ảnh 8"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -283,7 +280,7 @@
                             <img
                                 src="/wedding/images/album/NTD02818.webp"
                                 alt="Ảnh 9"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -292,7 +289,7 @@
                             <img
                                 src="/wedding/images/album/NTD02823.webp"
                                 alt="Ảnh 10"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -301,7 +298,7 @@
                             <img
                                 src="/wedding/images/album/NTD03188.webp"
                                 alt="Ảnh 11"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -310,7 +307,7 @@
                             <img
                                 src="/wedding/images/album/NTD02572.webp"
                                 alt="Ảnh 12"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -319,7 +316,7 @@
                             <img
                                 src="/wedding/images/album/NTD02980.webp"
                                 alt="Ảnh 13"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -328,7 +325,7 @@
                             <img
                                 src="/wedding/images/album/NTD03214.webp"
                                 alt="Ảnh 14"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -337,7 +334,7 @@
                             <img
                                 src="/wedding/images/album/NTD02313.webp"
                                 alt="Ảnh 15"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -346,7 +343,7 @@
                             <img
                                 src="/wedding/images/album/NTD01970.webp"
                                 alt="Ảnh 16"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -355,7 +352,7 @@
                             <img
                                 src="/wedding/images/album/NTD02275.webp"
                                 alt="Ảnh 17"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -364,7 +361,7 @@
                             <img
                                 src="/wedding/images/album/NTD01779.webp"
                                 alt="Ảnh 18"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -373,7 +370,7 @@
                             <img
                                 src="/wedding/images/album/NTD03080.webp"
                                 alt="Ảnh 19"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -382,7 +379,7 @@
                             <img
                                 src="/wedding/images/album/NTD03418.webp"
                                 alt="Ảnh 20"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -391,7 +388,7 @@
                             <img
                                 src="/wedding/images/album/NTD02595.webp"
                                 alt="Ảnh 21"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -400,7 +397,7 @@
                             <img
                                 src="/wedding/images/album/NTD03072.webp"
                                 alt="Ảnh 22"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -409,7 +406,7 @@
                             <img
                                 src="/wedding/images/album/NTD02648.webp"
                                 alt="Ảnh 23"
-                                class="album-img"/>
+                                class="album-img m-shadow"/>
                         </div>
                     </a>
                     
@@ -424,15 +421,56 @@
 
             <!-- cô dâu chú rể -->
             <section id="section-wishes" class="section">
-                <p id="wishes" class="section-title fancy">Lời chúc</p>
+                <p class="section-title fancy">Lời chúc</p>
+                <div class="wish-container">
+                    <div id="wish-show" class="wish-box m-shadow">
+                        <ul>
+                            <li>
+                                <span class="wish-name">Nugyễn Văn A</span>
+                                <span class="wish-content">Lorem ipsum dolosit ament</span>
+                            </li>
+                            <li>
+                                <span class="wish-name">Nugyễn Văn A</span>
+                                <span class="wish-content">Lorem ipsum dolosit ament</span>
+                            </li>
+                            <li>
+                                <span class="wish-name">Nugyễn Văn A</span>
+                                <span class="wish-content">Lorem ipsum dolosit ament</span>
+                            </li>
+                            <li>
+                                <span class="wish-name">Nugyễn Văn A</span>
+                                <span class="wish-content">Lorem ipsum dolosit ament</span>
+                            </li>
+                            <li>
+                                <span class="wish-name">Nugyễn Văn A</span>
+                                <span class="wish-content">Lorem ipsum dolosit ament</span>
+                            </li>
+                            <li>
+                                <span class="wish-name">Nugyễn Văn A</span>
+                                <span class="wish-content">Lorem ipsum dolosit ament</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="wish-send" class="wish-box m-shadow">
+                        <input type="text" 
+                            placeholder="Nhập họ tên của bạn"
+                            name="wish-name" id="wish-name"/>
+                        <textarea
+                            placeholder="Nhập lời chúc của bạn"
+                            name="wish-content"
+                            id="wish-content"></textarea>
+                        <button type="button">Gửi lời chúc</button>
+                    </div>
+                </div>
             </section>
 
             <!-- address and time -->
             <section id="section-events" class="section">
-                <p id="events" class="section-title fancy">Tiệc cưới&nbsp;&&nbsp;lễ thành hôn</p>
+                <p id="events" class="section-title fancy">Tiệc cưới&nbsp;&&nbsp;Lễ thành hôn</p>
                 <div class="event-container">
                     <!-- groom's house event -->
-                    <div class="wedding-event">
+                    <div class="wedding-event m-shadow">
                         <!-- the map -->
                         <div class="iframe-map">
                             <iframe
@@ -465,7 +503,7 @@
                     </div>
 
                     <!-- bride's house event -->
-                    <div class="wedding-event">
+                    <div class="wedding-event m-shadow">
                         <!-- map -->
                         <div class="iframe-map">
                             <iframe
@@ -516,7 +554,7 @@
 
             <!-- music playing button -->
             <div class="overlay-hover">
-                <div id="music-button" align="center">
+                <div id="music-button" align="center" class="m-shadow">
                     <span class="material-symbols-outlined"
                         id="music-button-icon">
                         music_note
@@ -525,38 +563,55 @@
             </div>
 
             <!-- banking modal -->
+            <section id="section-donate" class="donate-modal">
+            <div class="donate-dialog m-shadow">
+                
+                <div class="donate-side">
+                    <p>mừng chú rể</p>
+                    <div align="center">
+                        <img src="images/random-qr.png"/>
+                    </div>
+                    <p>Ngân hàng: <strong>VCB</strong></p>
+                    <p>Số TK: <strong>xxx xxx xxx xxx</strong></p>
+                    <p>Chủ TK: <strong>Đỗ Ngọc Dũng</strong></p>
+                </div>
+                
+                <div class="donate-side">
+                    <p>mừng cô dâu</p>
+                    <div align="center">
+                        <img src="images/random-qr.png"/>
+                    </div>
+                    <p>Ngân hàng: <strong>VCB</strong></p>
+                    <p>Số TK: <strong>xxx xxx xxx xxx</strong></p>
+                    <p>Chủ TK: <strong>Trần Thị Minh Trang</strong></p>
+                </div>
+                
+                <div class="donate-close">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+            </section>
+
             <div
-                class="modal fade"
+                class="modal"
                 id="modal-mung-cuoi"
                 tabindex="-1"
                 role="dialog"
                 aria-hidden="true">
-                "HELLO"
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div style="text-align: right">
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close">
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
     </body>
 </html>

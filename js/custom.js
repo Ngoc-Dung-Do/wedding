@@ -178,10 +178,87 @@ const getMetaVar = (name) => {
     return elem.content
 }
 
+// init modal
+// ==========
+const initModal = () => {
+    const modal = document.querySelector(".donate-modal")
+    const btnOpen = document.querySelector(".donate-open")
+    const btnClose = document.querySelector(".donate-close")
+
+    const openModal = () => {
+        modal.style.display = "flex";
+    }
+    const closeModal = () => {
+        modal.style.display = "none";
+    }
+
+    btnOpen.addEventListener("click", openModal)
+    btnClose.addEventListener("click", closeModal)
+    console.log(modal)
+}
+
+// github API for comments
+// this is dangerous, this is a special case though
+const GH_TOKEN = "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"
+const COMMENTS_URL = "https://api.github.com/repos/ndgnuh/ndgnuh.github.io/issues/1/comments"
+
+const getGhHeaders = () => {
+    const headers = {}
+    headers["Accept"] = "application/vnd.github+json"
+    headers["Authorization"] = `Bearer ${GH_TOKEN}`
+    headers["X-GitHub-Api-Version"] = "2022-11-28"
+    return headers
+}
+
+const addWish = async (name, comment) => {
+    const body = {name: name, comment: comment}
+    try {
+        const res = await fetch(COMMENTS_URL, {
+            method: "POST",
+            headers: getGhHeaders(),
+            body: JSON.stringify({body: JSON.stringify(body)})
+        })
+        return res.ok
+    }
+    catch (err) {
+        return err.toString()
+    }
+}
+
+const getWishes = async () => {
+    try {
+        const res = await fetch(COMMENTS_URL, {
+            method: 'GET',
+            headers: getGhHeaders(),
+            redirect: 'follow'
+        })
+        const data = await res.json();
+        const comments = data.map(comment => {
+            try {
+                const parsed = JSON.parse(comment["body"])
+                return {
+                    comment: parsed.comment,
+                    name: parsed.name,
+                    blacklist: comment["reactions"]["-1"] > 0,
+                }
+            } catch (err) {
+                return false
+            }
+        })
+        return comments.filter(x => x)
+    }
+    catch (error) {
+        return error.toString()
+    }
+}
+
 document.addEventListener( 'DOMContentLoaded', () => {
     initMusic();
     initHeartEffect();
     initTimer();
     initGallery();
+    initModal();
+
+    getWishes().then(console.log)
 });
 
