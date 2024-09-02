@@ -30,7 +30,7 @@ const initCarousel = () => {
 
 /* Setup music button */
 /* ================== */
-const initMusic = () => {
+const async initMusic = () => {
     const audio = new Audio(`/wedding/musics/em-ve-tinh-khoi.mp3`);
     const audioButton = document.querySelector('#music-button')
     const audioIcon = document.querySelector('#music-button-icon')
@@ -311,10 +311,10 @@ const initWishBox = () => {
 
 document.addEventListener( 'DOMContentLoaded', () => {
     initWishBox()
-    initMusic();
     initHeartEffect();
     initTimer();
     initGallery();
     initModal();
+    initMusic().then(console.log); // heavy, loaded last
 });
 
