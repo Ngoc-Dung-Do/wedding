@@ -30,7 +30,7 @@ const initCarousel = () => {
 
 /* Setup music button */
 /* ================== */
-const async initMusic = () => {
+const initMusic = async () => {
     const audio = new Audio(`/wedding/musics/em-ve-tinh-khoi.mp3`);
     const audioButton = document.querySelector('#music-button')
     const audioIcon = document.querySelector('#music-button-icon')
