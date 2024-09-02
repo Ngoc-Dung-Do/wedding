@@ -102,16 +102,6 @@ def build(
     with open(out_index, "w", encoding="utf-8") as f:
         f.write(rendered)
 
-    """minify"""
-    for file in get_files(output_dir):
-        print(file)
-        if file.endswith(".css"):
-            process_single_css_file(file, overwrite=True)
-        if file.endswith(".html"):
-            process_single_html_file(file, overwrite=True)
-        if file.endswith(".js"):
-            process_single_js_file(file, overwrite=True)
-
     print("DONE!")
 
 
