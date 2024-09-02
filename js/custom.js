@@ -30,7 +30,7 @@ const initCarousel = () => {
 
 /* Setup music button */
 /* ================== */
-const initMusic = () => {
+const initMusic = async () => {
     const audio = new Audio(`/wedding/musics/em-ve-tinh-khoi.mp3`);
     const audioButton = document.querySelector('#music-button')
     const audioIcon = document.querySelector('#music-button-icon')
@@ -59,28 +59,14 @@ const initHeartEffect = () => {
     const totalGroups = 10; // Tổng số nhóm bạn muốn tạo
     const fallInterval = 2000; // Khoảng thời gian giữa các nhóm trái tim (2 giây)
     const animationDuration = 15; // Thay đổi thời gian hoạt hình tại đây
-    const choices = [
-        'chem-1.png',
-        'chem-2.png',
-        'chem-3.png',
-        'chem-4.png',
-        'chem-5.png',
-        'chem-6.svg',
-        'math-1.png',
-        'math-2.png',
-        'math-3.png',
-        'math-4.png',
-        'math-5.png',
-        'math-6.png',
-    ].map(img => `/wedding/images/icons/${img}`)
 
-    const hearts = [
-        "heart-1.svg",
-        "heart-2.svg",
-        "heart-3.png",
-        "heart-4.png",
-        "heart-5.svg",
-    ].map(img => `/wedding/images/icons/${img}`)
+    const sprites = Array.from(
+        document.querySelectorAll("meta[name='sprite']")
+    ).map(meta => meta.getAttribute("content"))
+    const funSprites = sprites.filter(x => x.search('heart') === -1)
+    const heartSprites = sprites.filter(x => x.search('heart') > 0)
+    console.log(heartSprites)
+    console.log(funSprites)
 
     const randChoice = (lst) => {
         let n = lst.length;
@@ -95,9 +81,9 @@ const initHeartEffect = () => {
         for (let i = 0; i < numHeartsPerGroup; i++) {
             const heart = document.createElement('img');
             if (Math.random() < 0.6667) {
-                heart.src = randChoice(hearts);
+                heart.src = randChoice(heartSprites);
             } else {
-                heart.src = randChoice(choices);
+                heart.src = randChoice(funSprites);
             }
             heart.className = 'snowfall-flakes';
             heart.style.position = `fixed`; // Đặt kích thước ngẫu nhiên
@@ -311,10 +297,10 @@ const initWishBox = () => {
 
 document.addEventListener( 'DOMContentLoaded', () => {
     initWishBox()
-    initMusic();
     initHeartEffect();
     initTimer();
     initGallery();
     initModal();
+    initMusic().then(console.log); // heavy, loaded last
 });
 

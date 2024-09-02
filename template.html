@@ -2,9 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
-        <meta name="slug" content="/wedding"/>
-        <meta name="sprite-dir" content="/wedding/images/icons/"/>
-        <meta name="music-dir" content="/wedding/musics/"/>
+        {% for sprite in sprites %}
+        <meta name="sprite" content="/wedding/{{sprite}}"/>
+        {% endfor %}
         <link rel="icon" type="image/x-icon" href="/wedding/favicon.ico">
 
         <title>Dũng & Trang</title>
@@ -114,7 +114,7 @@
                 <p class="section-title fancy">Cặp đôi</p>
                 <div id="couple" class="couple-container">
                     <div class="couple-row">
-                        <img src="/wedding/images/groom.png" class="couple-block"/>
+                        <img src="/wedding/{{ groom_image }}" class="couple-block"/>
                         <div id="groom-info" class="couple-block">
                             <span class="fancy couple-name">Đỗ Ngọc Dũng</span>
                             <span class="parent-title">Con ông:&nbsp;</span>
@@ -131,7 +131,7 @@
                             <span class="parent-title">Con bà:&nbsp;</span>
                             <span class="parent-name">Vũ Thị Thúy</span>
                         </div>
-                        <img src="/wedding/images/bride.png" class="couple-block"/>
+                        <img src="/wedding/{{ bride_image }}" class="couple-block"/>
                     </div>
                 </div>
             </section>
@@ -234,7 +234,7 @@
                 <div id="footer-overlay">
                 </div>
                 <div id="footer-heart">
-                    <img src="/wedding/images/icons/heart-white.svg" width="100%"/>
+                    <img src="/wedding/images/backgrounds/heart-white.svg" width="100%"/>
                 </div>
             </footer>
 

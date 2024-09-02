@@ -1,12 +1,14 @@
-footer-image: "images/album/NTD01947.webp"
+footer-image: "images/album/02-NTD01947.webp"
+bride-image: "images/bride.webp"
+groom-image: "images/groom.webp"
 donations:
   - title: mừng chú rể
-    qr: images/random-qr.png
+    qr: images/random-qr.webp
     bank: VCB
     account: xxx xxx xxx xxx
     owner: Đỗ Ngọc Dũng
   - title: mừng cô dâu
-    qr: images/random-qr.png
+    qr: images/random-qr.webp
     bank: VCB
     account: xxx xxx xxx xxx
     owner: Trần Thị Minh Trang
@@ -22,4 +24,3 @@ events:
     location: |
       Thảo Nguyên Resort, Quốc Lộ 6, Phiêng Luông, thị trấn Mộc Châu, Sơn La 
     map-url: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.869323937309!2d104.6656707108302!3d20.83698268068454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313395535a6ffdf1%3A0x12412678d397737b!2sThao%20Nguyen%20Resort!5e0!3m2!1sen!2s!4v1725288856849!5m2!1sen!2s
-    #map-url: https://maps.app.goo.gl/b68x21bKLzuK1iet5
