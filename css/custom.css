@@ -207,8 +207,8 @@ body {
     background-repeat: no-repeat;
     background-position: center 90%;
 }
-#groom-info { background-image: url("/wedding/images/flower-bg-left.png"); }
-#bride-info { background-image: url("/wedding/images/flower-bg-right.png"); }
+#groom-info { background-image: url("/wedding/images/backgrounds/flower-left.webp"); }
+#bride-info { background-image: url("/wedding/images/backgrounds/flower-right.webp"); }
 
 @media only screen and (max-width: 512px) {
     #bride-info, #groom-info  {
@@ -305,7 +305,7 @@ body {
     background-size: auto 100% ;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url('/wedding/images/floral-heading-10.png');
+    background-image: url('/wedding/images/backgrounds/heading.webp');
 }
 
 /* Alice
@@ -321,14 +321,14 @@ body {
 #section-events { background: #fce1e4; }
 
 #section-wishes .section-bg-image {
-    background: url('/wedding/images/background-chuc-phuc.png');
+    background: url('/wedding/images/backgrounds/chuc-phuc.webp');
     background-position: center center;
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
 
 #section-events .section-bg-image {
-    background: url('/wedding/images/heart-bg.svg');
+    background: url('/wedding/images/backgrounds/heart-bg.svg');
     background-position: center center;
     background-size: 2rem auto;
     background-repeat: repeat;
@@ -336,7 +336,7 @@ body {
 }
 
 #section-gallery .section-bg-image {
-    background: url('/wedding/images/diamond-bg.svg');
+    background: url('/wedding/images/backgrounds/diamond-bg.svg');
     background-position: center center;
     background-size: 0.5rem auto;
     background-repeat: repeat;
@@ -409,6 +409,7 @@ body {
 }
 
 .snowfall-flakes {
+    pointer-events: none !important;
     position: absolute;
     z-index: 10;
     animation: fall 20s ease-in-out infinite, rotate 4s ease-in-out infinite;
