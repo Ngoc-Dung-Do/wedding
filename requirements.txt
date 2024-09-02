@@ -2,3 +2,4 @@ Jinja2
 pyyaml
 reloadserver
 Pillow
+css-html-js-minify

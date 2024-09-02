@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
@@ -30,73 +29,78 @@
                 You need to enable JavaScript to run this website.
             </noscript>
 
-            <!-- overlay container -->
+            <!-- image carousel -->
             <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
-                <!-- <div class="carousel-indicators"> -->
-                <!--     {% for link in carousel_images %} -->
-                <!--     <button -->
-                <!--         type="button" -->
-                <!--         data-bs-target="#mycarousel" -->
-                <!--         data-bs-slide-to="{{loop.index}}" -->
-                <!--         {% if loop.index0 == 0 %} -->
-                <!--         class="active" -->
-                <!--         aria-current="true" -->
-                <!--         {% endif %} -->
-                <!--         aria-label="Slide {{loop.index}}"> -->
-                <!--     </button> -->
-                <!--     {% endfor %} -->
-                <!-- </div> -->
+                <!-- carousel images -->
                 <div class="carousel-inner">
                     {% for link in carousel_images %}
+                    <!-- carousel image {{ loop.index0 }} -->
+                    <div
                         {% if loop.index0 == 0 %}
-                        <div class="carousel-item active" data="{{loop.index0}}">
+                        class="carousel-item active"
                         {% else %}
-                        <div class="carousel-item " data="{{loop.index0}}">
+                        class="carousel-item"
                         {% endif %}
-                        <div class="carousel-crop"
+                        data="{{loop.index0}}">
+                        <div
+                            class="carousel-crop"
                             style="background-image: url('/wedding/{{ link }}')">
                         </div>
                     </div>
+                    <!-- end carousel image {{ loop.index0 }} -->
                     {% endfor %}
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                <!-- control buttons -->
+                <button
+                    class="carousel-control-prev"
+                    type="button" data-bs-target="#mycarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true">
+                    </span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#mycarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#mycarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true">
+                    </span>
                     <span class="visually-hidden">Next</span>
                 </button>
 
                 <!-- overlay tint -->
                 <div class='carousel-tint'></div>
-
-                <!-- the overlay text -->
                 <div class="carousel-overlay lh-sm w-100">
-                    <p class="fancy stroke fs-1 text-wrap"
-                    style="text-align:center">
-                    <span>Ngọc Dũng</span>
-                    <br class="d-sm-none">
-                    <span>&nbsp;&&nbsp;</span>
-                    <br class="d-sm-none">
-                    <span>Minh Trang</span>
+                    <!-- the overlay text -->
+                    <p class="fancy stroke fs-1 text-wrap" style="text-align:center">
+                        <span>Ngọc Dũng</span>
+                        <br class="d-sm-none"/>
+                        <span>&nbsp;&&nbsp;</span>
+                        <br class="d-sm-none"/>
+                        <span>Minh Trang</span>
                     </p>
+
                     <!-- The timer -->
                     <div class="stroke timer fs-2">
                         <p class="timer-item text-center">
-                        <span id="timer-days"></span><br/>Ngày
+                            <span id="timer-days"></span><br/>Ngày
                         </p>
                         <p class="timer-item text-center">
-                        <span id="timer-hours"></span><br/>Giờ
+                            <span id="timer-hours"></span><br/>Giờ
                         </p>
                         <p class="timer-item text-center">
-                        <span id="timer-minutes"></span><br/>Phút
+                            <span id="timer-minutes"></span><br/>Phút
                         </p>
                         <p class="timer-item text-center">
-                        <span id="timer-seconds"></span><br/>Giây
+                            <span id="timer-seconds"></span><br/>Giây
                         </p>
+                        <!--end timer-->
                     </div>
+                    <!--end overlay-->
                 </div>
+                <!--end carousel-->
             </div>
 
             <!-- navigation bar -->
@@ -105,8 +109,7 @@
                 <a href="#album" class="my-nav-link">Ảnh cưới</a>
                 <a href="#section-wishes" class="my-nav-link">Chúc phúc</a>
                 <a href="#events" class="my-nav-link">Tiệc cưới</a>
-                <a href="javascript:void(0)"
-                    class="my-nav-link donate-open">Mừng cưới</a>
+                <a href="javascript:void(0)" class="my-nav-link donate-open">Mừng cưới</a>
             </nav>
 
             <!-- couple introduction -->
@@ -145,9 +148,9 @@
                     <a class="masonry-item" href="/wedding/{{link}}">
                         <div class="overlay-hover">
                             <img
-                                src="/wedding/{{ link }}"
-                                alt="Ảnh {{ loop.index0 }}"
-                                class="album-img m-shadow"/>
+                            src="/wedding/{{ link }}"
+                            alt="Ảnh {{ loop.index0 }}"
+                            class="album-img m-shadow"/>
                         </div>
                     </a>
                     {% endfor %}
@@ -168,15 +171,14 @@
                     <div id="wish-show" class="wish-box m-shadow">
                         <ul id="wish-box"></ul>
                     </div>
-
                     <div id="wish-send" class="wish-box m-shadow">
                         <input type="text" 
-                            placeholder="Nhập họ tên của bạn"
-                            name="wish-name" id="wish-name"/>
+                        placeholder="Nhập họ tên của bạn"
+                        name="wish-name" id="wish-name"/>
                         <textarea
                             placeholder="Nhập lời chúc của bạn"
                             name="wish-content"
-                            id="wish-content"></textarea>
+                            id="wish-content"/>
                         <button type="button" name="wish-submit">
                             Gửi lời chúc
                         </button>
@@ -246,7 +248,7 @@
                     <span class="mdi-icon">
                         outgoing_mail
                     </span>
-                    <label class="m-shadow fab-tooltip">Chúc phúc</label>
+                    <span class="m-shadow fab-tooltip">Chúc phúc</span>
                 </a>
 
                 <!-- donation button -->
@@ -254,7 +256,7 @@
                     <span class="mdi-icon">
                         credit_card_heart
                     </span>
-                    <label class="m-shadow fab-tooltip">Mừng cưới</label>
+                    <span class="m-shadow fab-tooltip">Mừng cưới</span>
                 </a>
 
                 <!-- music playing button -->
@@ -263,7 +265,7 @@
                         id="music-button-icon">
                         music_note
                     </span>
-                    <label class="m-shadow fab-tooltip">Bật/tắt nhạc</label>
+                    <span class="m-shadow fab-tooltip">Bật/tắt nhạc</span>
                 </a>
             </div>
 
@@ -271,9 +273,7 @@
             <section id="section-donate" class="donate-modal">
                 <div class="donate-dialog m-shadow">
                     <div class="donate-close">
-                        <span class="mdi-icon">
-                            close
-                        </span>
+                        <span class="mdi-icon">close</span>
                     </div>
                     <div class="donate-dialog-content">
                         {% for donation in donations %}
@@ -290,26 +290,7 @@
                     </div>
                 </div>
             </section>
-
-            <div
-                class="modal"
-                id="modal-mung-cuoi"
-                tabindex="-1"
-                role="dialog"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div style="text-align: right">
-                            <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
     </body>
 </html>
 

@@ -4,6 +4,9 @@ from argparse import ArgumentParser
 from os import path
 
 import yaml
+from css_html_js_minify import (process_single_css_file,
+                                process_single_html_file,
+                                process_single_js_file)
 from jinja2 import Environment, FileSystemLoader
 
 
@@ -98,6 +101,17 @@ def build(
     out_index = path.join(output_dir, "index.html")
     with open(out_index, "w", encoding="utf-8") as f:
         f.write(rendered)
+
+    """minify"""
+    for file in get_files(output_dir):
+        print(file)
+        if file.endswith(".css"):
+            process_single_css_file(file, overwrite=True)
+        if file.endswith(".html"):
+            process_single_html_file(file, overwrite=True)
+        if file.endswith(".js"):
+            process_single_js_file(file, overwrite=True)
+
     print("DONE!")
 
 
