@@ -1,0 +1,15 @@
+{
+    "nha-trai": {
+        "card": "images/invitation/card-m-2.webp",
+        "guests": [
+            "Thầy Nguyễn Đức Anh",
+            "Bạn Phùng Anh Hùng",
+            "Bạn Nguyễn Công Đoàn",
+            "Bạn Nguyễn Xuân Trường"
+        ]
+    },
+    "nha-gai": {
+        "card": "images/invitation/card-f-2.webp",
+        "guests": ["Test"]
+    }
+}

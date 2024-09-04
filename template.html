@@ -190,6 +190,20 @@
             <!-- address and time -->
             <section id="section-events" class="section">
                 <p id="events" class="section-title fancy">Tiệc cưới&nbsp;&&nbsp;Lễ thành hôn</p>
+                {% if guest_name %}
+                <script>
+                </script>
+                <div class="event-container"
+                    id="invitation"
+                    style='margin-bottom: 2rem; border-radius: 0'>
+                    <div class="wedding-event m-shadow" style="border-radius: 0pt">
+                        <img src="invitation.svg" width="100%"/>
+                    </div>
+                    <div class="wedding-event m-shadow" style="border-radius: 0pt">
+                        <img src="/wedding/{{ invite_card_url }}" width="100%"/>
+                    </div>
+                </div>
+                {% endif %}
                 <div class="event-container">
                     {% for event in events %}
                     <div class="wedding-event m-shadow">
@@ -281,7 +295,7 @@
                         <div class="donate-side">
                             <p>{{ donation["title"] }}</p>
                             <div align="center">
-                                <img src="{{ donation["qr"] }}"/>
+                                <img src="/wedding/{{ donation["qr"] }}"/>
                             </div>
                             <p>Ngân hàng: <strong>{{ donation["bank"] }}</strong></p>
                             <p>Số TK: <strong>{{ donation ["account"] }}</strong></p>

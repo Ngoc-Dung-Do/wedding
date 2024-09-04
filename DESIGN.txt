@@ -4,6 +4,10 @@ Cursive and floaty font: Pinyon Script
 Body font: ???
 Heading font: ???
 
+Cards:
+- https://fonts.google.com/specimen/Sacramento
+- https://fonts.google.com/specimen/Dancing+Script
+- https://fonts.google.com/specimen/Rokkitt
 
 COLOR TEMPLATE
 ==============

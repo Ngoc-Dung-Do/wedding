@@ -30,6 +30,13 @@
   src: url(/wedding/fonts/MaterialSymbols/MaterialSymbolsOutlined.woff2) format('woff2');
 }
 
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/wedding/fonts/Dancing_Script/static/DancingScript-Regular.ttf) format('truetype');
+}
+
 .mdi-icon {
   font-family: 'Material Symbols Outlined';
   font-weight: normal;

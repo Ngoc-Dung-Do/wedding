@@ -3,12 +3,12 @@ bride-image: "images/bride.webp"
 groom-image: "images/groom.webp"
 donations:
   - title: mừng chú rể
-    qr: images\qr_dung_cropped.jpg
+    qr: images/qr_dung_cropped.jpg
     bank: TP Bank
     account: 0577 6199 101
     owner: Đỗ Ngọc Dũng
   - title: mừng cô dâu
-    qr: images\qr_trang_cropped.jpg
+    qr: images/qr_trang_cropped.jpg
     bank: VietinBank
     account: 105621042001
     owner: Trần Thị Minh Trang
