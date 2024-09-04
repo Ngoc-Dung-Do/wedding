@@ -116,9 +116,11 @@ def build(
 
     inv_paths = []
     for _, guest_group in guests.items():
-        salt = f"{random.random():0.6f}".split(".")[1]
         card_url = guest_group["card"]
         for guest_name in guest_group["guests"]:
+            # Avoid name collision...
+            salt = f"{random.random():0.6f}".split(".")[1]
+
             # Render
             rendered = template.render(
                 **ctx,
