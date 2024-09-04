@@ -241,7 +241,7 @@ const getWishes = async () => {
     }
 }
 
-const initWishBox = () => {
+const initWishBox = (callback) => {
     const eWishBox = document.getElementById("wish-box")
     const eWishName = document.querySelector("input[name='wish-name']")
     const eWishContent = document.querySelector("textarea[name='wish-content']")
@@ -267,7 +267,7 @@ const initWishBox = () => {
         eWishBox.innerHTML = (
             `<p>Có lỗi xảy ra khi tải lời chúc:</p>${err.toString()}`
         )
-    })
+    }).then((_) => callback())
 
     /* On submit, just append the wish */
     eWishSubmit.addEventListener("click", () => {
@@ -296,7 +296,13 @@ const initWishBox = () => {
 }
 
 document.addEventListener( 'DOMContentLoaded', () => {
-    initWishBox()
+    // this is because the wish box affect the page y-layout
+    let invitation = document.querySelector("#invitation")
+    if (invitation != undefined) {
+        invitation = document.querySelector("#section-events")
+        setTimeout(() => invitation.scrollIntoView(), 250);
+    }
+    initWishBox(() => {})
     initHeartEffect();
     initTimer();
     initGallery();
