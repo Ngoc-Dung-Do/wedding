@@ -38,7 +38,7 @@ body {
     gap: 0.2rem;
 }
 
-.with-icon .material-symbols-outlined {
+.with-icon .mdi-icon {
     position: relative;
     bottom: -0.2rem;
     display: inline;
@@ -533,6 +533,8 @@ body {
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 800;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
     color: var(--color-bold-secondary);
 }
 
@@ -549,6 +551,7 @@ body {
 
 /* Footer */
 #footer-container {
+    scroll-snap-type: y mandatory;
     position: relative;
 }
 
@@ -687,11 +690,10 @@ body {
 #wish-show ul {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 400px;
     overflow-y: auto;
     list-style-type: none;
     border: 2px solid #ddedea;
-    min-height: 250px;
     min-width: 300px;
 }
 
@@ -778,4 +780,21 @@ body {
     #wish-show {
         aspect-ratio: 1;
     }
+}
+
+.guest-card {
+    position: relative;
+}
+
+.guest-name {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    /* top: calc((612.393 - 22.667 / 2) / 674.000 * 100)%; */
+    top: 89.17796735905046%;
+    font-family: "Dancing Script";
+    font-size: 1.1875rem;
+    color: #64664e;
 }
