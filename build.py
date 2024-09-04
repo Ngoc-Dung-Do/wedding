@@ -1,13 +1,21 @@
+import base64
 import json
 import os
-import random
 import shutil
+from io import BytesIO
 from os import path
 
 import yaml
+from cairosvg import svg2png
 from jinja2 import Environment, FileSystemLoader
 from PIL import Image
 from slugify import slugify
+
+
+def read_file_b64(file: str) -> str:
+    with open(file, "rb") as f:
+        b64 = base64.b64encode(f.read())
+    return b64.decode("utf-8")
 
 
 def get_files(rootdir: str):
@@ -114,25 +122,33 @@ def build(
     with open("guest-list.json", encoding="utf-8") as f:
         guests = json.load(f)
 
+    background_base64 = read_file_b64("images/invitation/card-1-plain.png")
     inv_paths = []
     for _, guest_group in guests.items():
         card_url = guest_group["card"]
         for guest_name in guest_group["guests"]:
             # Render
-            rendered = template.render(
-                **ctx,
+            new_ctx = dict(
                 guest_name=guest_name,
                 invite_card_url=card_url,
+                background_base64=background_base64,
+                **ctx,
             )
-            rendered_card = invitation_template.render(guest_name=guest_name)
+            rendered = template.render(new_ctx)
+            rendered_card = invitation_template.render(new_ctx)
+
+            # Use the rendered card to generete image
+            tmp_svg = BytesIO(rendered_card.encode("utf-8"))
+            tmp_png = BytesIO(svg2png(file_obj=tmp_svg))
 
             # Write rendered outputs
             out_path = path.join(inv_dir, slugify(guest_name))
+            out_image = path.join(out_path, "invitation.webp")
+            out_index = path.join(out_path, "index.html")
             os.makedirs(out_path, exist_ok=True)
-            with open(path.join(out_path, "index.html"), "w") as f:
+            Image.open(tmp_png).save(out_image)
+            with open(out_index, "w") as f:
                 f.write(rendered)
-            with open(path.join(out_path, "invitation.svg"), "w") as f:
-                f.write(rendered_card)
 
             # Save invitation slugs
             url = "https://ngoc-dung-do.github.io"

@@ -25,6 +25,7 @@ jobs:
     
     - name: build
       run: |
+        cp fonts/Dancing_Script/DancingScript-Regular.ttf /usr/share/fonts/
         pip install -r requirements.txt
         python build.py
 

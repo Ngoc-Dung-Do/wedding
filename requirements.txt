@@ -3,3 +3,4 @@ pyyaml
 reloadserver
 Pillow
 python-slugify
+cairosvg
