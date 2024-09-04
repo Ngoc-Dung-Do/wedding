@@ -118,9 +118,6 @@ def build(
     for _, guest_group in guests.items():
         card_url = guest_group["card"]
         for guest_name in guest_group["guests"]:
-            # Avoid name collision...
-            salt = f"{random.random():0.6f}".split(".")[1]
-
             # Render
             rendered = template.render(
                 **ctx,
@@ -130,7 +127,7 @@ def build(
             rendered_card = invitation_template.render(guest_name=guest_name)
 
             # Write rendered outputs
-            out_path = path.join(inv_dir, slugify(guest_name) + "-" + salt)
+            out_path = path.join(inv_dir, slugify(guest_name))
             os.makedirs(out_path, exist_ok=True)
             with open(path.join(out_path, "index.html"), "w") as f:
                 f.write(rendered)
