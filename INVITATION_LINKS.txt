@@ -1,3 +1,4 @@
+Bạn Xuân Trường: https://ngoc-dung-do.github.io/wedding/invitation/ban-xuan-truong
 Thầy Nguyễn Đức Anh: https://ngoc-dung-do.github.io/wedding/invitation/thay-nguyen-duc-anh
 Bạn Tiến Đạt: https://ngoc-dung-do.github.io/wedding/invitation/ban-tien-dat
 Bạn Tiến Dũng: https://ngoc-dung-do.github.io/wedding/invitation/ban-tien-dung
@@ -67,5 +68,6 @@ bạn Ngọc Anh: https://ngoc-dung-do.github.io/wedding/invitation/ban-ngoc-anh
 bạn Mạnh Thắng: https://ngoc-dung-do.github.io/wedding/invitation/ban-manh-thang
 Long Hoàng: https://ngoc-dung-do.github.io/wedding/invitation/long-hoang
 Huy và Hậu: https://ngoc-dung-do.github.io/wedding/invitation/huy-va-hau
-em Sơn: https://ngoc-dung-do.github.io/wedding/invitation/em-son
+em Hương: https://ngoc-dung-do.github.io/wedding/invitation/em-huong
+em Linh Trang: https://ngoc-dung-do.github.io/wedding/invitation/em-linh-trang
 Test: https://ngoc-dung-do.github.io/wedding/invitation/test
