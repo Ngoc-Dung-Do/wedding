@@ -2,6 +2,7 @@
     "nha-trai": {
         "card": "images/invitation/card-m-2.webp",
         "guests": [
+            "Bạn Xuân Trường",
          "Thầy Nguyễn Đức Anh", 
          "Bạn Tiến Đạt", 
          "Bạn Tiến Dũng", 
@@ -71,7 +72,8 @@
          "bạn Mạnh Thắng", 
          "Long Hoàng", 
          "Huy và Hậu", 
-         "em Sơn"   
+         "em Hương",
+         "em Linh Trang" 
         ]
     },
     "nha-gai": {
